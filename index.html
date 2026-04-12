@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  China AI Ecosystem — Top 40 Startups
+  China AI Ecosystem: Top 40 Startups
   Capstone Research Visualization
   Author: Chinonso Anyanwu
   College: Schwarzman College, Tsinghua University
@@ -11,10 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>China's AI Ecosystem — Top 40 Startups</title>
+<title>China's AI Ecosystem: Top 40 Startups</title>
 <meta name="description" content="An interactive map of China's top 40 AI startups, analyzing public-private partnerships, AI Pilot Zones, and developmental orchestration.">
 <meta name="author" content="Chinonso Anyanwu, Schwarzman College, Tsinghua University">
-<meta property="og:title" content="China AI Ecosystem — Top 40 Startups">
+<meta property="og:title" content="China AI Ecosystem: Top 40 Startups">
 <meta property="og:description" content="Interactive capstone research map: China's AI Pilot Zones, startup ecosystem, and developmental orchestration.">
 <meta property="og:type" content="website">
 <!-- Zodiak for hero display text (Fontshare) -->
@@ -28,8 +28,8 @@
 <style>
 /*
   Art direction: China AI policy research capstone
-  Tone: Academic research tool — precise, not flashy
-  Palette: Original Nexus teal — cool surfaces, teal accent
+  Tone: Academic research tool, precise, not flashy
+  Palette: Original Nexus teal, cool surfaces, teal accent
   Typography: Zodiak (hero display only) + DM Sans (all UI/body)
   Density: Balanced
 */
@@ -163,7 +163,7 @@ header{
 .logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;color:var(--color-text);}
 .logo-mark{width:36px;height:36px;flex-shrink:0;}
 .logo-text{display:flex;flex-direction:column;line-height:1.1;}
-/* Logo uses Zodiak too — small but consistent with hero brand voice */
+/* Logo uses Zodiak too: small but consistent with hero brand voice */
 .logo-text strong{font-family:var(--font-display);font-size:var(--text-base);font-weight:700;letter-spacing:-0.01em;}
 .logo-text span{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:400;}
 nav{display:flex;align-items:center;gap:var(--space-6);}
@@ -176,7 +176,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
 @media(max-width:768px){nav{display:none;}}
 
 /* =============================================
-   HERO — Zodiak serif throughout
+   HERO: Zodiak serif throughout
    All other sections use DM Sans (--font-body)
    ============================================= */
 .hero{
@@ -186,7 +186,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
     var(--color-bg));
 }
 
-/* Masthead — two-line institution block */
+/* Masthead: two-line institution block */
 .hero-masthead{margin-bottom:var(--space-5);}
 .hero-institution{
   font-family:var(--font-body);
@@ -206,7 +206,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   letter-spacing:0.02em;
 }
 
-/* Main title — Zodiak, large, italic weight contrast */
+/* Main title: Zodiak, large, italic weight contrast */
 .hero h1{
   font-family:var(--font-display);
   font-size:var(--text-2xl);
@@ -222,7 +222,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   font-weight:400;
   color:var(--color-primary);
 }
-/* Subtitle line — lighter weight, sits just below h1 */
+/* Subtitle line: lighter weight, sits just below h1 */
 .hero-subtitle{
   font-family:var(--font-display);
   font-size:var(--text-lg);
@@ -233,7 +233,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   line-height:1.2;
 }
 
-/* Description — Zodiak at body size for this section only */
+/* Description: Zodiak at body size for this section only */
 .hero-desc{
   font-family:var(--font-display);
   font-size:var(--text-base);
@@ -249,7 +249,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   font-weight:700;
   color:var(--color-text);
 }
-/* Footnote — italic, faint, methodological anchor */
+/* Footnote: italic, faint, methodological anchor */
 .hero-footnote{
   font-family:var(--font-display);
   font-size:var(--text-xs);
@@ -261,7 +261,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   line-height:1.6;
 }
 
-/* Stats — Zodiak numbers, DM Sans labels */
+/* Stats: Zodiak numbers, DM Sans labels */
 .hero-stats{
   display:flex;gap:var(--space-8);flex-wrap:wrap;
   padding-top:var(--space-6);
@@ -276,7 +276,7 @@ nav a.active{color:var(--color-primary);font-weight:600;}
   line-height:1;
   letter-spacing:-0.03em;
 }
-/* Stat labels revert to DM Sans — clean contrast with Zodiak numbers */
+/* Stat labels revert to DM Sans: clean contrast with Zodiak numbers */
 .stat-label{
   font-family:var(--font-body);
   font-size:var(--text-xs);
@@ -354,7 +354,7 @@ tbody td{padding:var(--space-3) var(--space-4) var(--space-4);vertical-align:top
 .city-firms{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6;}
 .city-zone{margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-primary);font-weight:500;}
 
-/* ===== CITIES PANEL — VISUAL MAP ===== */
+/* ===== CITIES PANEL: VISUAL MAP ===== */
 .cities-layout{display:grid;grid-template-columns:1fr;gap:var(--space-6);}
 @media(min-width:1000px){.cities-layout{grid-template-columns:1.6fr 1fr;align-items:start;}}
 .map-container{position:relative;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);overflow:hidden;}
@@ -600,7 +600,7 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
         </div>
       </div>
       <div class="table-wrap">
-        <table aria-label="China AI Startup Ecosystem — Top 40">
+        <table aria-label="China AI Startup Ecosystem: Top 40">
           <thead>
             <tr>
               <th scope="col" class="th-sort" data-sort="rank" aria-sort="ascending"># <span class="sort-icon">↕</span></th>
@@ -709,7 +709,7 @@ const startups = [
   {rank:30,name:"Black Sesame Tech",cn:"黑芝麻智能",city:"Wuhan",cityClass:"",sector:"chip",sectorLabel:"AI Chips / Automotive",founded:2016,funding:"Public (HK Stock Exchange 2024)",fundingLevel:"high",policyAlignment:"National smart vehicle chip; Wuhan automotive cluster",relevance:2,role:"Orchestration beyond tier-1 zones; state smart vehicle supply chain"},
   {rank:31,name:"Kuaishou AI (Kling)",cn:"快手AI/可灵",city:"Beijing",cityClass:"beijing",sector:"app",sectorLabel:"AI Video / Multimodal",founded:2021,funding:"Part of Kuaishou (~$10B mkt cap)",fundingLevel:"high",policyAlignment:"Beijing AI ecosystem; Kling video model; content policy",relevance:3,role:"Video AI: content-AI convergence under digital economy policy"},
   {rank:32,name:"Vidu (生数科技)",cn:"生数科技",city:"Beijing",cityClass:"beijing",sector:"app",sectorLabel:"AI Video Generation",founded:2023,funding:"¥2B (~$293M); Alibaba Cloud led",fundingLevel:"high",policyAlignment:"Tsinghua spinout; Zhongguancun Science City; Beijing AI Fund",relevance:3,role:"Generative video AI: Tsinghua spinout; 10× revenue growth 2025"},
-  {rank:33,name:"Lingyi Wanwu / AI Health",cn:"灵医万物",city:"Beijing",cityClass:"beijing",sector:"app",sectorLabel:"AI Healthcare",founded:2023,funding:"~$50M Series A",fundingLevel:"mid",policyAlignment:"AI + healthcare priority; Pilot Zone; NHSA data partnership",relevance:3,role:"Healthcare AI: data governance domain — hospital data under NHSA framework"},
+  {rank:33,name:"Lingyi Wanwu / AI Health",cn:"灵医万物",city:"Beijing",cityClass:"beijing",sector:"app",sectorLabel:"AI Healthcare",founded:2023,funding:"~$50M Series A",fundingLevel:"mid",policyAlignment:"AI + healthcare priority; Pilot Zone; NHSA data partnership",relevance:3,role:"Healthcare AI: data governance domain, hospital data under NHSA framework"},
   {rank:34,name:"Fourier Intelligence",cn:"傅利叶智能",city:"Shanghai",cityClass:"shanghai",sector:"robot",sectorLabel:"Robotics / Humanoid",founded:2015,funding:"~$100M+; Series B",fundingLevel:"mid",policyAlignment:"Shanghai humanoid robot policy; Lingang Special Zone",relevance:2,role:"Shanghai robotics: PPP via rehabilitation data partnerships"},
   {rank:35,name:"Midea / KUKA China",cn:"美的AI/库卡",city:"Guangzhou",cityClass:"",sector:"robot",sectorLabel:"Industrial Robotics / AI",founded:2017,funding:"KUKA acquisition ~$5B (Midea Group)",fundingLevel:"high",policyAlignment:"GBA manufacturing policy; KUKA localization; MiC 2025",relevance:2,role:"Manufacturing-AI PPP: Midea/KUKA localisation into China's AI supply chain"},
   {rank:36,name:"CAS Star (中科星图)",cn:"中科星图",city:"Beijing",cityClass:"beijing",sector:"infra",sectorLabel:"Geospatial AI / Remote Sensing",founded:2006,funding:"Public (A-share STAR Market)",fundingLevel:"mid",policyAlignment:"CAS spinout; national geospatial data platform; dual-use AI",relevance:3,role:"Institutional integration: CAS spinout; state data asset monetisation via PPP"},
@@ -729,11 +729,11 @@ const cityData=[
 
 const insights=[
   {icon:"building-2",color:"var(--color-primary)",title:"Capital Coordination Domain",body:"28 of 40 companies received guidance fund investment or state-backed capital. Beijing State-owned Capital Operation and municipal AI funds operationalise the first orchestration domain in the capstone framework."},
-  {icon:"database",color:"var(--color-blue)",title:"Data & Compute Governance",body:"Huawei Cloud, Alibaba Cloud, Cambricon, and Moore Threads collectively form the compute infrastructure layer. Within Beijing's Pilot Zone, firms receive subsidised access — a direct expression of the infrastructure governance domain."},
+  {icon:"database",color:"var(--color-blue)",title:"Data & Compute Governance",body:"Huawei Cloud, Alibaba Cloud, Cambricon, and Moore Threads collectively form the compute infrastructure layer. Within Beijing's Pilot Zone, firms receive subsidised access, a direct expression of the infrastructure governance domain."},
   {icon:"graduation-cap",color:"var(--color-gold)",title:"Institutional Integration",body:"Zhipu AI (Tsinghua KEG spinout), Moonshot AI (TU/CMU alumni), Vidu, and SoundAI directly evidence the university-industry transfer pathway. Zhejiang University underlies Hangzhou's Six Dragons and Unitree Robotics."},
-  {icon:"map-pin",color:"var(--color-orange)",title:"AI Pilot Zone Clustering",body:"Over 82% of companies cluster in Beijing (19), Hangzhou (8), or Shanghai (6) — the three most mature AI Pilot Zones. This validates the capstone's argument that zone designation shapes ecosystem outcomes."},
+  {icon:"map-pin",color:"var(--color-orange)",title:"AI Pilot Zone Clustering",body:"Over 82% of companies cluster in Beijing (19), Hangzhou (8), or Shanghai (6), the three most mature AI Pilot Zones. This validates the capstone's argument that zone designation shapes ecosystem outcomes."},
   {icon:"git-branch",color:"var(--color-purple)",title:"Two Orchestration Models",body:"Beijing (research-state-capital) vs. Hangzhou (platform-anchored / Alibaba-led) represent the two institutional pathways compared in the capstone. DeepSeek and Unitree test non-state-capital orchestration."},
-  {icon:"cpu",color:"var(--color-error)",title:"Compute Sovereignty Imperative",body:"Under US export controls on Nvidia GPUs, Cambricon, Moore Threads, MetaX, Horizon Robotics, and Huawei's Ascend chips are now strategic assets — directly supporting the data & infrastructure governance domain."}
+  {icon:"cpu",color:"var(--color-error)",title:"Compute Sovereignty Imperative",body:"Under US export controls on Nvidia GPUs, Cambricon, Moore Threads, MetaX, Horizon Robotics, and Huawei's Ascend chips are now strategic assets, directly supporting the data & infrastructure governance domain."}
 ];
 
 
@@ -1287,7 +1287,7 @@ const relationshipGroups = [
     icon: "flask-conical",
     color: "var(--color-orange)",
     title: "Research Lab → Ecosystem",
-    description: "State and institutional research labs that serve as ecosystem anchors — connecting government, universities, and companies.",
+    description: "State and institutional research labs that serve as ecosystem anchors, connecting government, universities, and companies.",
     relationships: [
       {
         from: { label: "BAAI (Beijing Academy of AI)", type: "lab" },
@@ -1318,7 +1318,7 @@ const relationshipGroups = [
     icon: "layers",
     color: "var(--color-primary)",
     title: "Platform Company → Downstream Startups",
-    description: "Large platform companies that provide infrastructure, compute, or distribution to smaller AI firms — a key feature of China's ecosystem architecture.",
+    description: "Large platform companies that provide infrastructure, compute, or distribution to smaller AI firms. A key feature of China's ecosystem architecture.",
     relationships: [
       {
         from: { label: "Alibaba Cloud", type: "investor" },
@@ -1358,7 +1358,7 @@ function renderRelationships() {
   root.innerHTML = `
     <div class="rel-tab-header">
       <h2 class="rel-tab-title">Ecosystem Relationships</h2>
-      <p class="rel-tab-desc">Structured evidence of the key linkages that define China's AI ecosystem — funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
+      <p class="rel-tab-desc">Structured evidence of the key linkages that define China's AI ecosystem: funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
       <p class="rel-tab-note">Only relationships verifiable through credible public sources are included. Unverified links have been deliberately excluded.</p>
     </div>
 
@@ -1429,33 +1429,33 @@ function renderRelGroups() {
 //  ANALYTICAL LAYER DATA & RENDERER
 //  Lens: Talent Pipelines
 //  Rationale: the most comprehensively evidenced lens across all 40
-//  companies — founder biographies, university records, and the
+//  companies: founder biographies, university records, and the
 //  MacroPolo/Stanford AI Index corroborate every city-level claim.
 // ══════════════════════════════════════════════════════════════════════
 
 const analyticalData = {
   lens: "Talent Pipelines",
-  lensRationale: "Capital flows data is meaningful but concentrated in a few large rounds. Compute access data remains partially opaque due to Huawei's unreported allocations. Talent pipelines, by contrast, are the most consistently evidenced lens across all 40 companies — founder biographies are publicly documented, university affiliations verifiable, and the macro data (MacroPolo, Stanford AI Index, Bloomberg/LexisNexis patent analysis) corroborates city-level conclusions. This lens also most directly maps to the capstone's \"institutional integration\" domain.",
+  lensRationale: "Capital flows data is meaningful but concentrated in a few large rounds. Compute access data remains partially opaque due to Huawei's unreported allocations. Talent pipelines are the most consistently evidenced lens across all 40 companies: founder biographies are publicly documented, university affiliations are verifiable, and macro data from MacroPolo, Stanford AI Index, and Bloomberg/LexisNexis corroborates city-level conclusions. This lens also most directly maps to the capstone's \"institutional integration\" domain.",
   keyStats: [
     {
       num: "47%",
       label: "Top global AI researchers from China",
-      note: "Up from 29% in 2019 — MacroPolo 2022 Global AI Talent Tracker"
+      note: "Up from 29% in 2019. MacroPolo 2022 Global AI Talent Tracker"
     },
     {
       num: "4,986",
       label: "AI/ML patents filed by Tsinghua (2005–2024)",
-      note: "More than MIT, Stanford, Princeton and Harvard combined — Bloomberg/LexisNexis"
+      note: "More than MIT, Stanford, Princeton and Harvard combined. Bloomberg/LexisNexis"
     },
     {
       num: "66%",
       label: "Beijing VC flowing to AI startups (2023–24)",
-      note: "#1 globally — Startup Genome data"
+      note: "#1 globally. Startup Genome data"
     },
     {
       num: "$4.4B",
       label: "Beijing AI investment in 2025",
-      note: "4× Shanghai's $1.1B — AI World / aiworld.eu"
+      note: "4x Shanghai's $1.1B. AI World / aiworld.eu"
     }
   ],
   cities: [
@@ -1465,12 +1465,12 @@ const analyticalData = {
       scoreLabel: "Pipeline Strength",
       bar: 100,
       top: true,
-      verdict: "Dominates on every pipeline dimension — institutional density, state-research integration, and cross-sector talent recycling.",
+      verdict: "Dominates on every pipeline dimension: institutional density, state-research integration, and cross-sector talent recycling.",
       signals: [
         "Tsinghua University filed 4,986 AI/ML patents (2005–2024), more than MIT, Stanford, Princeton, and Harvard combined (Bloomberg/LexisNexis)",
-        "BAAI — established 2018 by Beijing Municipal Government — formally links Peking University, Tsinghua, Baidu, Xiaomi, and ByteDance into one research-to-industry pipeline",
+        "BAAI, established in 2018 by Beijing Municipal Government, formally links Peking University, Tsinghua, Baidu, Xiaomi, and ByteDance into one research-to-industry pipeline",
         "Direct spinouts traceable in the top-40 dataset: Zhipu AI (Tsinghua KEG), Vidu (Tsinghua), SoundAI (Tsinghua X-LANCE), Horizon Robotics (Baidu alum), CAS Star (CAS)",
-        "Moonshot AI founding team includes Tsinghua and CMU alumni — cross-border talent circulation within the pilot zone",
+        "Moonshot AI founding team includes Tsinghua and CMU alumni, reflecting cross-border talent circulation within the pilot zone",
         "66% of Beijing VC directed to AI startups (2023–24), highest share globally (Startup Genome)"
       ]
     },
@@ -1482,8 +1482,8 @@ const analyticalData = {
       top: false,
       verdict: "Strong ZJU-anchored pipeline, augmented by Alibaba's industrial spillovers and the government-backed Zhijiang Lab.",
       signals: [
-        "DeepSeek founders (including Liang Wenfeng) are Zhejiang University alumni — ZJU's CS and engineering departments are the primary talent source",
-        "Zhijiang Lab (2017): ZJU + Alibaba + Zhejiang Provincial Government three-way partnership, ¥30B state funding — acts as research-to-startup accelerator (Nature, 2019)",
+        "DeepSeek founders (including Liang Wenfeng) are Zhejiang University alumni; ZJU's CS and engineering departments are the primary talent source",
+        "Zhijiang Lab (2017): ZJU + Alibaba + Zhejiang Provincial Government three-way partnership, ¥30B state funding. Acts as research-to-startup accelerator (Nature, 2019)",
         "ZJU launched China's first AI undergraduate program in 2018 and hosts the country's sole national AI textbook base (est. 2024)",
         "Unitree Robotics and the broader Six Dragons cohort are all linked to ZJU's engineering-manufacturing nexus"
       ]
@@ -1494,7 +1494,7 @@ const analyticalData = {
       scoreLabel: "Pipeline Strength",
       bar: 70,
       top: false,
-      verdict: "Talent pipeline is cross-institutional rather than anchored by a single flagship university — strong in CAS-linked and overseas-returnee talent.",
+      verdict: "Talent pipeline is cross-institutional rather than anchored by a single flagship university, with strength in CAS-linked and overseas-returnee talent.",
       signals: [
         "MiniMax founder Yan Junjie: PhD from CAS Institute of Automation, postdoc at Tsinghua, then SenseTime before founding MiniMax (MiniMax IPO prospectus)",
         "Stepfun and MetaX draw on a mix of overseas returnees and domestic CAS/Fudan-linked researchers",
@@ -1508,7 +1508,7 @@ const analyticalData = {
       scoreLabel: "Pipeline Strength",
       bar: 57,
       top: false,
-      verdict: "Talent pipeline is hardware-anchored — strong in engineering and manufacturing talent, weaker in foundational AI research output.",
+      verdict: "Talent pipeline is hardware-anchored: strong in engineering and manufacturing talent, weaker in foundational AI research output.",
       signals: [
         "Huawei Cloud and Tencent are large internal talent pools, but function as absorbers rather than originators of frontier AI research talent",
         "DJI's dominance in drones reflects deep hardware/systems engineering capability drawn from the GBA manufacturing belt",
@@ -1524,7 +1524,7 @@ const analyticalData = {
       top: false,
       verdict: "Strong in narrow verticals (voice AI, automotive chips) due to USTC's research depth, but limited ecosystem breadth.",
       signals: [
-        "iFlytek's deep USTC ties make Hefei a national leader in voice/NLP AI — one of China's few non-tier-1 AI champions",
+        "iFlytek's deep USTC ties make Hefei a national leader in voice/NLP AI, one of China's few non-tier-1 AI champions",
         "Wuhan's Black Sesame Tech is automotive-chip focused, aligned with Wuhan's vehicle manufacturing cluster",
         "Nanjing and Xi'an appear in China's top-5 AI research cities (2025) but have not yet produced equivalent commercialisation outcomes"
       ]
@@ -1590,7 +1590,7 @@ const analyticalData = {
     { text: "Lens selection: talent pipelines were chosen over capital flows and compute access because they are verifiable across the largest number of companies in the dataset using primary sources (IPO filings, university records, press biographies).", url: null },
     { text: "City pipeline scores (out of 100) are a qualitative composite of: documented university spinouts in the top-40 dataset, research output rankings (aiworld.eu, 2025), VC-to-AI concentration data (Startup Genome), and patent output data (Bloomberg/LexisNexis via Fortune, Nov 2025). They are indicative rather than strictly quantitative.", url: "https://fortune.com/2025/11/19/us-china-ai-race-higher-education-tsinghua-university-outpacing-ivy-league-mit-harvard-stanford/" },
     { text: "MacroPolo Global AI Talent Tracker (2022): China's share of top AI researchers rose from 29% (2019) to 47% (2022). Most work in the US, but the pipeline originates in Chinese universities.", url: "https://macropolo.org/digital-projects/the-global-ai-talent-tracker/" },
-    { text: "Stanford AI Index 2024: US institutions produced 40 significant AI models in 2024 vs. 15 from China — indicating that talent density does not yet fully translate into frontier model output.", url: "https://aiindex.stanford.edu/" },
+    { text: "Stanford AI Index 2024: US institutions produced 40 significant AI models in 2024 vs. 15 from China, indicating that talent density does not yet fully translate into frontier model output.", url: "https://aiindex.stanford.edu/" },
     { text: "Relationships excluded due to insufficient evidence: specific headcount data for individual companies' university hires; claimed ZJU affiliations for Hangzhou companies not confirmed in founder biographies.", url: null }
   ]
 };
@@ -1658,7 +1658,7 @@ function renderAnalytical() {
   root.innerHTML = `
     <div class="al-header">
       <div class="al-lens-badge"><i data-lucide="users" width="12" height="12"></i> Analytical Lens: ${lens}</div>
-      <h2 class="al-title">Where does China's AI talent come from — and where does it go?</h2>
+      <h2 class="al-title">Where does China's AI talent come from, and where does it go?</h2>
       <p class="al-subtitle">Talent pipelines are the most consistently verifiable analytical lens across all 40 companies in this dataset. University spinouts, founder biographies, and macro research output data align to produce a coherent picture of where ecosystem advantage is concentrated.</p>
       <div class="al-rationale">
         <h4>Why this lens?</h4>
