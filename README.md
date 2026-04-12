@@ -1,6 +1,6 @@
 # China AI Ecosystem Map
 
-**Capstone Research · Interactive Portfolio Artifact**  
+**Thesis Research · Interactive Portfolio Artifact**  
 Chinonso Anyanwu · Schwarzman College, Tsinghua University · 2026
 
 [**Live Site →**](https://china-ai-ecosystem-map.vercel.app)
@@ -9,7 +9,7 @@ Chinonso Anyanwu · Schwarzman College, Tsinghua University · 2026
 
 ## What This Is
 
-An interactive, single-page research tool mapping China's top 40 AI startups against the analytical framework of this capstone: *developmental orchestration* — the mechanism by which China's AI Pilot Zones coordinate capital, institutional resources, and talent to produce frontier AI ecosystems.
+An interactive, single-page research tool mapping China's top 40 AI startups against the analytical framework of this thesis: *developmental orchestration* — the mechanism by which China's AI Pilot Zones coordinate capital, institutional resources, and talent to produce frontier AI ecosystems.
 
 Built as a portfolio artifact for investors, researchers, and institutional audiences. Every data point is sourced; every relationship is verified.
 
@@ -26,13 +26,13 @@ This extends Justin Yifu Lin's New Structural Economics to the digital economy, 
 ## Tabs
 
 ### Ecosystem Table
-40 companies across Foundation Models, Cloud/Compute, AI Chips, Robotics, Applications, and Research Infrastructure. Filterable by sector. Each company includes city, funding level, policy alignment, and capstone relevance score (1–5).
+40 companies across Foundation Models, Cloud/Compute, AI Chips, Robotics, Applications, and Research Infrastructure. Filterable by sector. Each company includes city, funding level, policy alignment, and thesis relevance score (1–5).
 
 ### City Breakdown
 AI Pilot Zone concentration across Beijing (19 companies), Hangzhou (8), Shanghai (6), Shenzhen/GBA (5), and Other (2). Visualizes how zone designation shapes ecosystem outcomes.
 
 ### Research Insights
-Six analytical cards linking ecosystem data directly to the capstone's three orchestration domains: capital coordination, data/compute governance, and institutional integration. Includes Key Takeaways at the top — investor-facing synthesis of the core findings.
+Six analytical cards linking ecosystem data directly to the thesis's three orchestration domains: capital coordination, data/compute governance, and institutional integration. Includes Key Takeaways at the top — investor-facing synthesis of the core findings.
 
 ### Relationships
 22 verified relationships in four categories: Funding, University Spinouts, Research Labs, and Platform Dependencies. Each card links to its primary source. Unverified relationships are excluded by design.
