@@ -14,9 +14,15 @@
 <title>China's AI Ecosystem: Top 40 Startups</title>
 <meta name="description" content="An interactive map of China's top 40 AI startups, analyzing public-private partnerships, AI Pilot Zones, and developmental orchestration.">
 <meta name="author" content="Chinonso Anyanwu, Schwarzman College, Tsinghua University">
-<meta property="og:title" content="China AI Ecosystem: Top 40 Startups">
-<meta property="og:description" content="Interactive capstone research map: China's AI Pilot Zones, startup ecosystem, and developmental orchestration.">
+<meta property="og:title" content="China AI Ecosystem Map">
+<meta property="og:description" content="Interactive research tool mapping China's top 40 AI startups across funding, talent pipelines, and institutional relationships. Capstone research, Schwarzman College, Tsinghua University.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://china-ai-ecosystem-map.vercel.app/">
+<meta property="og:site_name" content="China AI Ecosystem Map">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="China AI Ecosystem Map">
+<meta name="twitter:description" content="Interactive research tool mapping China's top 40 AI startups across funding, talent pipelines, and institutional relationships. Capstone research, Schwarzman College, Tsinghua University.">
 <!-- Zodiak for hero display text (Fontshare) -->
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&display=swap" rel="stylesheet">
@@ -1350,7 +1356,7 @@ const relationshipGroups = [
       {
         from: { label: "USTC (University of Science & Technology of China)", type: "university" },
         to: { label: "iFlytek", type: "company" },
-        desc: "iFlytek was founded in 1999 by researchers from USTC (Hefei) and maintains deep institutional ties with the university, benefiting from its voice/NLP research base.",
+        desc: "Founded in 1999 by USTC researchers. Maintains deep ties with the university; its voice/NLP research base is the foundation of iFlytek's product stack.",
         source: "Public record / site dataset",
         sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
       }
@@ -1431,14 +1437,13 @@ function renderRelationships() {
   ];
 
   root.innerHTML = `
-    <div class="rel-tab-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
-      <div>
-      <h2 class="rel-tab-title">Ecosystem Relationships</h2>
-      <p class="rel-tab-desc">Structured evidence of the key linkages that define China's AI ecosystem: funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
-      <p class="rel-tab-note">Only relationships verifiable through credible public sources are included. Unverified links have been deliberately excluded.</p>
-    </div>
+    <div class="rel-tab-header">
+      <div class="insights-header" style="margin-bottom:var(--space-3);">
+        <h2 class="rel-tab-title" style="margin-bottom:0;">Ecosystem Relationships</h2>
+        <button class="share-btn" id="shareRelationshipsBtn" aria-label="Copy link to Relationships tab"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
       </div>
-      <button class="share-btn" id="shareRelationshipsBtn" aria-label="Copy link to Relationships tab" style="flex-shrink:0;margin-top:4px;"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
+      <p class="rel-tab-desc">Structured evidence of the key linkages that define China&#x2019;s AI ecosystem: funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
+      <p class="rel-tab-note">Only relationships verifiable through credible public sources are included. Unverified links have been deliberately excluded.</p>
     </div>
 
     <div class="rel-filters">
@@ -1735,13 +1740,13 @@ function renderAnalytical() {
   ).join("");
 
   root.innerHTML = `
-    <div class="al-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
-      <div style="flex:1;">
+    <div class="al-header">
       <div class="al-lens-badge"><i data-lucide="users" width="12" height="12"></i> Analytical Lens: ${lens}</div>
-      <h2 class="al-title">Where does China&#x2019;s AI talent come from, and where does it go?</h2>
-      <p class="al-subtitle">University spinouts, founder biographies, and macro talent data converge on a consistent picture of where China&#x2019;s AI advantage is being built.</p>
+      <div class="insights-header" style="margin-bottom:var(--space-2);">
+        <h2 class="al-title" style="margin-bottom:0;">China&#x2019;s AI Talent Pipeline</h2>
+        <button class="share-btn" id="shareTalentBtn" aria-label="Copy link to Talent tab"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
       </div>
-      <button class="share-btn" id="shareTalentBtn" aria-label="Copy link to Talent tab" style="flex-shrink:0;margin-top:4px;"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
+      <p class="al-subtitle">University spinouts, founder biographies, and macro talent data converge on a consistent picture of where China&#x2019;s AI advantage is being built.</p>
     </div>
 
     <div class="al-stat-row">${statsHtml}</div>
