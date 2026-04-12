@@ -1751,6 +1751,8 @@ function renderAnalytical() {
       <p class="al-subtitle">University spinouts, founder biographies, and macro talent data converge on a consistent picture of where China&#x2019;s AI advantage is being built.</p>
     </div>
 
+    <div class="al-stat-row">${statsHtml}</div>
+
     <div class="al-filter-row" style="margin-bottom:var(--space-5);">
         <span class="rel-filter-label">Filter:</span>
         <button class="chip active" data-al-filter="all">All</button>
@@ -1760,8 +1762,6 @@ function renderAnalytical() {
         <button class="chip" data-al-filter="Provincial Research Lab">Regional Labs</button>
         <button class="chip" data-al-filter="Talent Exporter">Exporters</button>
     </div>
-
-    <div class="al-stat-row">${statsHtml}</div>
 
     <div class="al-section-title">Key Institutional Pipelines</div>
     <div class="al-pipeline-grid" id="al-pipeline-container">${pipelinesHtml}</div>
