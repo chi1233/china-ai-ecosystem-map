@@ -495,43 +495,12 @@ tbody td{padding:var(--space-3) var(--space-4) var(--space-4);vertical-align:top
 .al-stat-label{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;}
 .al-stat-note{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-1);}
 
-/* INSIGHTS UNIFIED */
-.insights-unified{display:flex;flex-direction:column;gap:var(--space-6);}
-.takeaways-block{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);}
+/* KEY TAKEAWAYS */
+.takeaways-block{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-6);}
 .takeaways-eyebrow{font-size:var(--text-xs);color:var(--color-primary);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:var(--space-4);}
 .takeaways-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--space-3);}
 .takeaway-item{font-size:var(--text-sm);color:var(--color-text);line-height:1.55;padding-left:var(--space-5);position:relative;}
-.takeaway-item::before{content:"";position:absolute;left:0;top:0.55em;width:6px;height:6px;border-radius:var(--radius-full);background:var(--color-primary);}
-.acc-block{border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;}
-.acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) var(--space-5);background:var(--color-surface);border:none;cursor:pointer;font-family:var(--font-body);transition:background var(--transition-interactive);}
-.acc-trigger:hover{background:var(--color-surface-offset);}
-.acc-trigger-left{display:flex;align-items:center;gap:var(--space-3);}
-.acc-trigger-icon{width:28px;height:28px;border-radius:var(--radius-sm);background:color-mix(in oklch,var(--color-primary) 12%,transparent);display:flex;align-items:center;justify-content:center;color:var(--color-primary);font-size:0.85rem;flex-shrink:0;}
-.acc-trigger-label{font-size:var(--text-sm);font-weight:600;color:var(--color-text);}
-.acc-chevron{font-size:0.7rem;color:var(--color-text-muted);transition:transform var(--transition-interactive);}
-.acc-trigger--open .acc-chevron{transform:rotate(180deg);}
-.acc-body{display:none;border-top:1px solid var(--color-divider);}
-.acc-body.is-open{display:block;}
-.acc-inner{padding:var(--space-5) var(--space-5) var(--space-6);}
-.acc-body-text{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;}
-.acc-highlight{display:flex;gap:var(--space-2);padding:var(--space-4);background:color-mix(in oklch,var(--color-primary) 6%,transparent);border-left:3px solid var(--color-primary);border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-top:var(--space-4);}
-.acc-highlight-label{font-size:var(--text-xs);color:var(--color-primary);font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:var(--space-1);}
-.acc-stat-row{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-4);}
-.acc-stat{flex:1;min-width:120px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);}
-.acc-stat-num{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-primary);letter-spacing:-0.03em;line-height:1;margin-bottom:2px;}
-.acc-stat-label{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:500;}
-.acc-stat-note{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:2px;}
-.acc-stack{display:flex;flex-direction:column;gap:var(--space-3);}
-/* METHODOLOGY MODAL */
-.method-modal{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;}
-.method-modal.is-open{display:flex;}
-.method-modal-box{position:relative;z-index:1;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);width:min(600px,92vw);max-height:82vh;overflow-y:auto;box-shadow:var(--shadow-lg);}
-.method-modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);margin-bottom:var(--space-6);}
-.method-modal-title{font-size:var(--text-lg);font-weight:700;color:var(--color-text);font-family:var(--font-display);}
-.method-section{margin-bottom:var(--space-5);}
-.method-section:last-child{margin-bottom:0;}
-.method-section-title{font-size:var(--text-xs);color:var(--color-primary);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:var(--space-2);}
-.method-section-body{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;}
+.takeaway-item::before{content:"";position:absolute;left:0;top:0.6em;width:6px;height:6px;border-radius:var(--radius-full);background:var(--color-primary);}
 
 /* FOOTER */
 footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padding:var(--space-6);}
@@ -575,6 +544,7 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
       <a href="#tab-map" data-nav-tab="map">Cities</a>
       <a href="#tab-insights" data-nav-tab="insights">Insights</a>
       <a href="#tab-relationships" data-nav-tab="relationships">Relationships</a>
+      <a href="#tab-analytical" data-nav-tab="analytical">Analytical Layer</a>
     </nav>
     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" data-label="Dark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
   </div>
@@ -618,8 +588,9 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     <div class="tab-bar" id="tab-ecosystem" role="tablist" aria-label="Ecosystem views">
       <button class="tab-btn active" role="tab" aria-selected="true" data-tab="ecosystem" aria-controls="panel-ecosystem">Ecosystem Table</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="map" aria-controls="panel-map">City Breakdown</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-tab="insights" aria-controls="panel-insights">Insights</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="insights" aria-controls="panel-insights">Research Insights</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="relationships" aria-controls="panel-relationships">Relationships</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="analytical" aria-controls="panel-analytical">Analytical Layer</button>
     </div>
 
     <div class="tab-panel active" id="panel-ecosystem" role="tabpanel">
@@ -683,7 +654,8 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     </div>
 
     <div class="tab-panel" id="panel-insights" role="tabpanel">
-      <div id="insights-root"></div>
+      <div class="takeaways-block" id="keyTakeawaysBlock"></div>
+      <div class="insights-grid" id="insightsGrid"></div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════
@@ -693,12 +665,20 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
       <div id="relationships-root"></div>
     </div>
 
+    <!-- ═══════════════════════════════════════════════════════
+         ANALYTICAL LAYER TAB
+         ═══════════════════════════════════════════════════════ -->
+    <div class="tab-panel" id="panel-analytical" role="tabpanel">
+      <div id="analytical-root"></div>
+    </div>
+
   </div>
 </main>
 
 <!-- METHODOLOGY MODAL -->
-<div id="methodology-modal" role="dialog" aria-modal="true" aria-labelledby="method-title" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;">
-  <div style="position:absolute;inset:0;background:oklch(0 0 0 / 0.45);backdrop-filter:blur(4px);" id="method-backdrop"></div>
+<div id="methodology-modal" role="dialog" aria-modal="true" aria-labelledby="method-title"
+  style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;">
+  <div id="method-backdrop" style="position:absolute;inset:0;background:oklch(0 0 0 / 0.45);backdrop-filter:blur(4px);"></div>
   <div style="position:relative;z-index:1;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);max-width:600px;width:calc(100% - 2rem);max-height:85vh;overflow-y:auto;box-shadow:var(--shadow-lg);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-5);">
       <h2 id="method-title" style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);">Methodology &amp; Sources</h2>
@@ -707,11 +687,11 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     <div style="display:flex;flex-direction:column;gap:var(--space-5);">
       <div>
         <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Company Selection</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">40 companies selected on the basis of: valuation or funding scale, policy alignment with China's AI Pilot Zone programme, and analytical relevance to the three orchestration domains (capital coordination, data/compute governance, institutional integration). Selection draws on the Hurun AI Top 50, STAR Market filings, Hong Kong IPO prospectuses, and verified press reporting as of Q1 2026.</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">40 companies selected on the basis of valuation or funding scale, policy alignment with China's AI Pilot Zone programme, and analytical relevance to the three orchestration domains (capital coordination, data/compute governance, institutional integration). Selection draws on the Hurun AI Top 50, STAR Market filings, Hong Kong IPO prospectuses, and verified press reporting as of Q1 2026.</p>
       </div>
       <div>
         <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">What Defines a Relationship</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Relationships are included only where verifiable evidence exists in a primary source (IPO prospectus, public filing, official institutional statement) or a highly reputable secondary source (Bloomberg, Reuters, SCMP, Nature, Forbes). Inferred or commonly-cited-but-unverified relationships are excluded. Each relationship card links directly to its source.</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Relationships are included only where verifiable evidence exists in a primary source (IPO prospectus, public filing, official institutional statement) or a highly reputable secondary source (Bloomberg, Reuters, SCMP, Nature, Forbes). Inferred or commonly cited but unverified relationships are excluded. Each relationship card links directly to its source.</p>
       </div>
       <div>
         <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Primary Sources</div>
@@ -719,7 +699,7 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
       </div>
       <div>
         <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Key Limitations</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Private company valuations are reported figures and may not reflect current market conditions. State guidance fund participation is often undisclosed; figures represent confirmed rounds only. Talent pipeline scores are qualitative composites, not strictly quantitative indices. The dataset reflects a snapshot as of Q1 2026 and will require updating as the ecosystem evolves.</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Private company valuations are reported figures and may not reflect current market conditions. State guidance fund participation is often undisclosed; figures represent confirmed rounds only. The dataset reflects a snapshot as of Q1 2026 and will require updating as the ecosystem evolves.</p>
       </div>
     </div>
   </div>
@@ -730,7 +710,7 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     <span class="footer-note">China AI Startup Ecosystem Map · Capstone Research · Chinonso Anyanwu · Schwarzman College, Tsinghua University · 2026</span>
     <span style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
       <button id="open-methodology" style="font-size:var(--text-xs);color:var(--color-text-faint);background:none;border:none;cursor:pointer;font-family:var(--font-body);text-decoration:underline;text-underline-offset:2px;padding:0;">Methodology &amp; Sources</button>
-      <span class="footer-tag">v1.0 &nbsp;&middot;&nbsp; April 2026</span>
+      <span class="footer-tag">v1.0 &middot; April 2026</span>
     </span>
   </div>
 </footer>
@@ -1070,7 +1050,6 @@ function drawChinaMap(){
 }
 
 
-// ── Key Takeaways ─────────────────────────────────────────────────────────────
 const keyTakeaways = [
   "Beijing dominates through institutional density: Tsinghua spinouts, BAAI, state guidance funds, and the AI Pilot Zone converge in a single bounded policy environment.",
   "Universities are the primary formation mechanism: direct spinouts (Zhipu AI, Vidu, SoundAI) and founder pipelines (DeepSeek/ZJU, MiniMax/CAS) account for the majority of top-10 companies.",
@@ -1078,105 +1057,23 @@ const keyTakeaways = [
   "Compute sovereignty is a binding constraint: US export controls on Nvidia GPUs have made Cambricon, Moore Threads, and Huawei Ascend strategic infrastructure assets, not merely commercial products."
 ];
 
-let insightsRendered = false;
-
 function renderInsights(){
-  if(insightsRendered) return;
-  insightsRendered = true;
-  const root = document.getElementById("insights-root");
-  if(!root) return;
-
-  // ── Accordion helper ──────────────────────────────────────────────────────
-  function accordion(id, label, icon, content) {
-    return `
-      <div class="acc-block" id="acc-${id}">
-        <button class="acc-trigger" aria-expanded="false" aria-controls="acc-body-${id}" data-acc="${id}">
-          <span class="acc-trigger-left">
-            <span class="acc-trigger-icon" style="color:var(--color-primary)">
-              <i data-lucide="${icon}" width="15" height="15"></i>
-            </span>
-            <span class="acc-trigger-label">${label}</span>
-          </span>
-          <span class="acc-chevron" aria-hidden="true"><i data-lucide="chevron-down" width="14" height="14"></i></span>
-        </button>
-        <div class="acc-body" id="acc-body-${id}" hidden>${content}</div>
-      </div>`;
+  const block = document.getElementById("keyTakeawaysBlock");
+  if(block){
+    block.innerHTML = `
+      <div class="takeaways-eyebrow">Key Takeaways</div>
+      <ul class="takeaways-list">
+        ${keyTakeaways.map(t=>`<li class="takeaway-item">${t}</li>`).join("")}
+      </ul>`;
   }
-
-  // ── Core Thesis content ──────────────────────────────────────────────────
-  const thesisContent = `
-    <div class="acc-inner">
-      <p class="acc-body-text">China's AI Pilot Zones represent a new form of digital-era state capacity. Rather than direct ownership or administrative command, the state coordinates through <strong>developmental orchestration</strong>: directing capital via guidance funds, governing access to data and compute infrastructure, and integrating universities, startups, and agencies into shared commercialisation platforms.</p>
-      <p class="acc-body-text" style="margin-top:var(--space-3);">This extends Justin Yifu Lin's New Structural Economics to the digital economy. Where traditional NSE identifies factor endowments in labor and capital, digital-era endowments are data, algorithms, computing capacity, and high-skill human capital. These are intangible, subject to increasing returns, and characterized by strong coordination externalities, creating a structural rationale for deliberate industrial policy.</p>
-      <div class="acc-highlight">
-        <span class="acc-highlight-label">Research Question</span>
-        How did China operationalize AI as a prospective comparative advantage, and how did digital industrial policy coordinate capital, data, and institutions to translate that advantage into robust startup ecosystems?
+  document.getElementById("insightsGrid").innerHTML=insights.map(ins=>`
+    <div class="insight-card">
+      <div class="insight-icon" style="background:color-mix(in oklab,${ins.color} 15%,var(--color-bg));color:${ins.color}">
+        <i data-lucide="${ins.icon}" width="20" height="20"></i>
       </div>
-    </div>`;
-
-  // ── Analytical Lens content (condensed from full tab) ────────────────────
-  const analyticalContent = `
-    <div class="acc-inner">
-      <div class="acc-body-text" style="margin-bottom:var(--space-4);"><strong>Lens: Talent Pipelines</strong> &nbsp;&middot;&nbsp; <span style="color:var(--color-text-faint);font-size:var(--text-xs);">Selected over capital flows and compute access on evidence quality. Founder biographies, university records, and macro data (MacroPolo, Stanford AI Index, Bloomberg/LexisNexis) are all primary-source verifiable.</span></div>
-      <div class="acc-stat-row">
-        <div class="acc-stat"><div class="acc-stat-num">47%</div><div class="acc-stat-label">Top global AI researchers from China</div><div class="acc-stat-note">MacroPolo 2022</div></div>
-        <div class="acc-stat"><div class="acc-stat-num">4,986</div><div class="acc-stat-label">Tsinghua AI patents (2005&ndash;24)</div><div class="acc-stat-note">More than MIT + Stanford + Princeton + Harvard</div></div>
-        <div class="acc-stat"><div class="acc-stat-num">66%</div><div class="acc-stat-label">Beijing VC into AI (2023&ndash;24)</div><div class="acc-stat-note">#1 globally &middot; Startup Genome</div></div>
-        <div class="acc-stat"><div class="acc-stat-num">$4.4B</div><div class="acc-stat-label">Beijing AI investment 2025</div><div class="acc-stat-note">4x Shanghai &middot; aiworld.eu</div></div>
-      </div>
-      <div style="margin-top:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);">
-        ${[
-          {city:"Beijing",score:97,bar:100,top:true,verdict:"Dominates on every pipeline dimension: institutional density, state-research integration, and cross-sector talent recycling."},
-          {city:"Hangzhou",score:82,bar:84,top:false,verdict:"Strong ZJU-anchored pipeline, augmented by Alibaba's industrial spillovers and the government-backed Zhijiang Lab."},
-          {city:"Shanghai",score:68,bar:70,top:false,verdict:"Cross-institutional rather than anchored by a single university, with strength in CAS-linked and overseas-returnee talent."},
-          {city:"Shenzhen / GBA",score:55,bar:57,top:false,verdict:"Hardware-anchored pipeline; strong engineering talent but weaker foundational AI research output."},
-          {city:"Hefei / Other",score:42,bar:43,top:false,verdict:"Strong in narrow verticals (voice AI, automotive chips) via USTC; limited ecosystem breadth."}
-        ].map(c=>`
-          <div style="display:flex;align-items:center;gap:var(--space-4);">
-            <div style="width:110px;flex-shrink:0;">
-              <span style="font-size:var(--text-xs);font-weight:600;color:${c.top?'var(--color-primary)':'var(--color-text)'}">${c.city}</span>
-            </div>
-            <div style="flex:1;">
-              <div style="height:4px;background:var(--color-surface-dynamic);border-radius:var(--radius-full);overflow:hidden;">
-                <div style="height:100%;width:${c.bar}%;background:${c.top?'var(--color-primary)':'color-mix(in oklab,var(--color-primary) 60%,var(--color-surface-dynamic))'};border-radius:var(--radius-full);"></div>
-              </div>
-            </div>
-            <div style="width:26px;flex-shrink:0;text-align:right;font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;color:var(--color-primary);">${c.score}</div>
-          </div>`).join('')}
-      </div>
-    </div>`;
-
-  root.innerHTML = `
-    <div class="insights-unified">
-
-      <!-- KEY TAKEAWAYS: always visible -->
-      <div class="takeaways-block">
-        <div class="takeaways-eyebrow">Key Takeaways</div>
-        <ul class="takeaways-list">
-          ${keyTakeaways.map(t=>`<li class="takeaway-item">${t}</li>`).join('')}
-        </ul>
-      </div>
-
-      <!-- ACCORDION SECTIONS -->
-      <div class="acc-stack">
-        ${accordion('thesis','Core Thesis','book-open',thesisContent)}
-        ${accordion('lens','Analytical Lens: Talent Pipelines','trending-up',analyticalContent)}
-      </div>
-
-    </div>`;
-
-  // ── Accordion logic ───────────────────────────────────────────────────────
-  root.querySelectorAll('[data-acc]').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const id = btn.dataset.acc;
-      const body = document.getElementById('acc-body-'+id);
-      const expanded = btn.getAttribute('aria-expanded')==='true';
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      body.hidden = expanded;
-      btn.classList.toggle('acc-trigger--open', !expanded);
-    });
-  });
-
+      <h3>${ins.title}</h3>
+      <p>${ins.body}</p>
+    </div>`).join("");
   lucide.createIcons();
 }
 
@@ -1199,6 +1096,7 @@ function activateTab(tabName){
     if(tabName==="map")renderCityPanel();
     if(tabName==="insights")renderInsights();
     if(tabName==="relationships")renderRelationships();
+    if(tabName==="analytical")renderAnalytical();
   }
 }
 
@@ -1223,7 +1121,7 @@ document.querySelectorAll("[data-nav-tab]").forEach(link=>{
 
 // Handle direct hash navigation on load
 (function(){
-  const map={"#tab-ecosystem":"ecosystem","#tab-map":"map","#tab-insights":"insights","#tab-relationships":"relationships"};
+  const map={"#tab-ecosystem":"ecosystem","#tab-map":"map","#tab-insights":"insights","#tab-relationships":"relationships","#tab-analytical":"analytical"};
   const tabName = map[location.hash] || "ecosystem";
   if(map[location.hash]) activateTab(tabName);
   // Set active nav link on load
@@ -1849,29 +1747,26 @@ function renderAnalytical() {
 }
 
 
-// ── Methodology Modal ──────────────────────────────────────────────────
+// Modal: Methodology & Sources
 (function(){
   function openModal(){
-    var m = document.getElementById('methodology-modal');
-    if(m){ m.style.display='flex'; document.body.style.overflow='hidden'; }
+    var m=document.getElementById('methodology-modal');
+    if(m){m.style.display='flex';document.body.style.overflow='hidden';}
   }
   function closeModal(){
-    var m = document.getElementById('methodology-modal');
-    if(m){ m.style.display='none'; document.body.style.overflow=''; }
+    var m=document.getElementById('methodology-modal');
+    if(m){m.style.display='none';document.body.style.overflow='';}
   }
-  document.addEventListener('DOMContentLoaded', function(){
-    var openBtn = document.getElementById('open-methodology');
-    var closeBtn = document.getElementById('method-close');
-    var backdrop = document.getElementById('method-backdrop');
-    if(openBtn)   openBtn.addEventListener('click', openModal);
-    if(closeBtn)  closeBtn.addEventListener('click', closeModal);
-    if(backdrop)  backdrop.addEventListener('click', closeModal);
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape') closeModal();
-    });
+  document.addEventListener('DOMContentLoaded',function(){
+    var openBtn=document.getElementById('open-methodology');
+    var closeBtn=document.getElementById('method-close');
+    var backdrop=document.getElementById('method-backdrop');
+    if(openBtn)openBtn.addEventListener('click',openModal);
+    if(closeBtn)closeBtn.addEventListener('click',closeModal);
+    if(backdrop)backdrop.addEventListener('click',closeModal);
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
   });
 })();
-
 </script>
 </body>
 </html>
