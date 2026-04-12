@@ -393,6 +393,108 @@ tbody td{padding:var(--space-3) var(--space-4) var(--space-4);vertical-align:top
 .insight-card h3{font-size:var(--text-base);font-weight:600;color:var(--color-text);margin-bottom:var(--space-2);}
 .insight-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;max-width:100%;}
 
+/* =============================================
+   RELATIONSHIPS TAB
+   ============================================= */
+.rel-tab-header{margin-bottom:var(--space-8);}
+.rel-tab-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;letter-spacing:-0.02em;color:var(--color-text);margin-bottom:var(--space-2);}
+.rel-tab-desc{font-size:var(--text-sm);color:var(--color-text-muted);max-width:72ch;line-height:1.7;}
+.rel-tab-note{margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;}
+
+/* Filter row */
+.rel-filters{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-6);align-items:center;}
+.rel-filter-label{font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);margin-right:var(--space-2);}
+
+/* Relationship group */
+.rel-group{margin-bottom:var(--space-8);}
+.rel-group-header{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider);}
+.rel-group-icon{width:32px;height:32px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rel-group-title{font-size:var(--text-base);font-weight:700;color:var(--color-text);}
+.rel-group-count{margin-left:auto;font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;}
+
+/* Relationship cards grid */
+.rel-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-3);}
+.rel-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);transition:box-shadow var(--transition-interactive),border-color var(--transition-interactive);}
+.rel-card:hover{box-shadow:var(--shadow-md);border-color:oklch(from var(--color-primary) l c h / 0.35);}
+.rel-card-nodes{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;}
+.rel-node{display:inline-flex;align-items:center;gap:var(--space-1);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:600;white-space:nowrap;}
+.rel-node--company{background:color-mix(in oklab,var(--color-primary) 12%,var(--color-bg));color:var(--color-primary);}
+.rel-node--university{background:color-mix(in oklab,var(--color-gold) 15%,var(--color-bg));color:var(--color-gold);}
+.rel-node--investor{background:color-mix(in oklab,var(--color-blue) 12%,var(--color-bg));color:var(--color-blue);}
+.rel-node--lab{background:color-mix(in oklab,var(--color-orange) 12%,var(--color-bg));color:var(--color-orange);}
+.rel-node--state{background:color-mix(in oklab,var(--color-purple) 12%,var(--color-bg));color:var(--color-purple);}
+.rel-arrow{color:var(--color-text-faint);font-size:var(--text-sm);flex-shrink:0;}
+.rel-card-desc{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6;}
+.rel-card-source{font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;margin-top:var(--space-1);}
+.rel-card-source a{color:var(--color-text-faint);text-decoration:underline;text-underline-offset:2px;}
+.rel-card-source a:hover{color:var(--color-primary);}
+.rel-type-badge{display:inline-block;padding:2px var(--space-2);border-radius:var(--radius-sm);font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
+.rel-type-badge--funding{background:color-mix(in oklab,var(--color-blue) 12%,var(--color-bg));color:var(--color-blue);}
+.rel-type-badge--university{background:color-mix(in oklab,var(--color-gold) 12%,var(--color-bg));color:var(--color-gold);}
+.rel-type-badge--lab{background:color-mix(in oklab,var(--color-orange) 12%,var(--color-bg));color:var(--color-orange);}
+.rel-type-badge--state{background:color-mix(in oklab,var(--color-purple) 12%,var(--color-bg));color:var(--color-purple);}
+.rel-type-badge--platform{background:color-mix(in oklab,var(--color-primary) 12%,var(--color-bg));color:var(--color-primary);}
+
+/* =============================================
+   ANALYTICAL LAYER TAB
+   ============================================= */
+.al-header{margin-bottom:var(--space-8);}
+.al-lens-badge{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-4);border-radius:var(--radius-full);background:color-mix(in oklab,var(--color-primary) 12%,var(--color-bg));color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--space-4);}
+.al-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;letter-spacing:-0.02em;color:var(--color-text);margin-bottom:var(--space-2);line-height:1.2;}
+.al-subtitle{font-size:var(--text-sm);color:var(--color-text-muted);max-width:72ch;line-height:1.7;margin-bottom:var(--space-3);}
+.al-rationale{background:var(--color-surface-offset);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);margin-bottom:var(--space-8);}
+.al-rationale h4{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);}
+.al-rationale p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;}
+
+/* City scorecards */
+.al-cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--space-4);margin-bottom:var(--space-8);}
+.al-city-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);}
+.al-city-card.al-city-card--top{border-color:var(--color-primary);box-shadow:0 0 0 1px oklch(from var(--color-primary) l c h / 0.2);}
+.al-city-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--space-3);}
+.al-city-name{font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--color-text);}
+.al-city-score{display:flex;flex-direction:column;align-items:flex-end;}
+.al-city-score-num{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-primary);line-height:1;letter-spacing:-0.03em;}
+.al-city-score-label{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);margin-top:2px;}
+.al-city-verdict{font-size:var(--text-sm);font-weight:600;color:var(--color-text);margin-bottom:var(--space-3);line-height:1.4;}
+.al-city-signals{display:flex;flex-direction:column;gap:var(--space-2);margin-bottom:var(--space-3);}
+.al-signal{display:flex;align-items:flex-start;gap:var(--space-2);}
+.al-signal-dot{width:6px;height:6px;border-radius:50%;background:var(--color-primary);flex-shrink:0;margin-top:5px;}
+.al-signal-text{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.55;}
+.al-bar-wrap{height:5px;background:var(--color-surface-dynamic);border-radius:var(--radius-full);overflow:hidden;margin-top:var(--space-3);}
+.al-bar-fill{height:100%;background:var(--color-primary);border-radius:var(--radius-full);transition:width 0.9s cubic-bezier(0.16,1,0.3,1);}
+
+/* Pipeline table */
+.al-section-title{font-size:var(--text-base);font-weight:700;color:var(--color-text);margin-bottom:var(--space-4);display:flex;align-items:center;gap:var(--space-2);}
+.al-section-title::before{content:"";display:block;width:3px;height:1.1em;background:var(--color-primary);border-radius:2px;}
+.al-pipeline-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--space-3);margin-bottom:var(--space-8);}
+.al-pipeline-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);}
+.al-pipeline-card-header{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-3);}
+.al-pipeline-icon{width:36px;height:36px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:color-mix(in oklab,var(--color-gold) 15%,var(--color-bg));color:var(--color-gold);}
+.al-pipeline-org{font-size:var(--text-sm);font-weight:700;color:var(--color-text);}
+.al-pipeline-type{font-size:var(--text-xs);color:var(--color-text-muted);}
+.al-pipeline-companies{display:flex;flex-wrap:wrap;gap:var(--space-1);margin-bottom:var(--space-3);}
+.al-pipeline-co{font-size:var(--text-xs);padding:2px var(--space-2);border-radius:var(--radius-sm);background:color-mix(in oklab,var(--color-primary) 10%,var(--color-bg));color:var(--color-primary);font-weight:500;}
+.al-pipeline-note{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.55;}
+.al-pipeline-source{font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;margin-top:var(--space-2);}
+.al-pipeline-source a{color:var(--color-text-faint);text-decoration:underline;text-underline-offset:2px;}
+.al-pipeline-source a:hover{color:var(--color-primary);}
+
+/* Methodology box */
+.al-methodology{background:var(--color-surface-offset);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:var(--space-5);margin-top:var(--space-8);}
+.al-methodology h4{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-3);}
+.al-methodology ul{list-style:none;display:flex;flex-direction:column;gap:var(--space-2);}
+.al-methodology li{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6;padding-left:var(--space-4);position:relative;}
+.al-methodology li::before{content:"—";position:absolute;left:0;color:var(--color-text-faint);}
+.al-methodology li a{color:var(--color-text-muted);text-decoration:underline;text-underline-offset:2px;}
+.al-methodology li a:hover{color:var(--color-primary);}
+
+/* Stat highlight row */
+.al-stat-row{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-bottom:var(--space-8);}
+.al-stat-card{flex:1;min-width:180px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);}
+.al-stat-num{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-primary);letter-spacing:-0.03em;line-height:1;margin-bottom:var(--space-1);}
+.al-stat-label{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;}
+.al-stat-note{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-1);}
+
 /* FOOTER */
 footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padding:var(--space-6);}
 .footer-inner{max-width:1200px;margin-inline:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4);}
@@ -434,6 +536,8 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
       <a href="#tab-ecosystem" data-nav-tab="ecosystem">Ecosystem</a>
       <a href="#tab-map" data-nav-tab="map">Cities</a>
       <a href="#tab-insights" data-nav-tab="insights">Insights</a>
+      <a href="#tab-relationships" data-nav-tab="relationships">Relationships</a>
+      <a href="#tab-analytical" data-nav-tab="analytical">Analytical Layer</a>
     </nav>
     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" data-label="Dark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
   </div>
@@ -478,6 +582,8 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
       <button class="tab-btn active" role="tab" aria-selected="true" data-tab="ecosystem" aria-controls="panel-ecosystem">Ecosystem Table</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="map" aria-controls="panel-map">City Breakdown</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="insights" aria-controls="panel-insights">Research Insights</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="relationships" aria-controls="panel-relationships">Relationships</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="analytical" aria-controls="panel-analytical">Analytical Layer</button>
     </div>
 
     <div class="tab-panel active" id="panel-ecosystem" role="tabpanel">
@@ -543,6 +649,21 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     <div class="tab-panel" id="panel-insights" role="tabpanel">
       <div class="insights-grid" id="insightsGrid"></div>
     </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         RELATIONSHIPS TAB
+         ═══════════════════════════════════════════════════════ -->
+    <div class="tab-panel" id="panel-relationships" role="tabpanel">
+      <div id="relationships-root"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ANALYTICAL LAYER TAB
+         ═══════════════════════════════════════════════════════ -->
+    <div class="tab-panel" id="panel-analytical" role="tabpanel">
+      <div id="analytical-root"></div>
+    </div>
+
   </div>
 </main>
 
@@ -918,6 +1039,8 @@ function activateTab(tabName){
     panel.classList.add("active");
     if(tabName==="map")renderCityPanel();
     if(tabName==="insights")renderInsights();
+    if(tabName==="relationships")renderRelationships();
+    if(tabName==="analytical")renderAnalytical();
   }
 }
 
@@ -942,7 +1065,7 @@ document.querySelectorAll("[data-nav-tab]").forEach(link=>{
 
 // Handle direct hash navigation on load
 (function(){
-  const map={"#tab-ecosystem":"ecosystem","#tab-map":"map","#tab-insights":"insights"};
+  const map={"#tab-ecosystem":"ecosystem","#tab-map":"map","#tab-insights":"insights","#tab-relationships":"relationships","#tab-analytical":"analytical"};
   const tabName = map[location.hash] || "ecosystem";
   if(map[location.hash]) activateTab(tabName);
   // Set active nav link on load
@@ -1013,6 +1136,560 @@ document.querySelectorAll(".th-sort").forEach(th=>{
 });
 
 renderTable();
+
+// ══════════════════════════════════════════════════════════════════════
+//  RELATIONSHIPS DATA & RENDERER
+// ══════════════════════════════════════════════════════════════════════
+
+/*
+  Only relationships that can be verified through primary or highly
+  reputable secondary sources are included.
+  Sources are cited inline on each card.
+  Relationships that could not be independently verified were excluded.
+*/
+
+const relationshipGroups = [
+  {
+    id: "funding",
+    type: "funding",
+    icon: "dollar-sign",
+    color: "var(--color-blue)",
+    title: "Investor → Company",
+    description: "Documented funding relationships between investors and portfolio companies, drawn from public filings, prospectuses, and verified press reports.",
+    relationships: [
+      {
+        from: { label: "Alibaba", type: "investor" },
+        to: { label: "Moonshot AI (Kimi)", type: "company" },
+        desc: "Alibaba co-led Moonshot AI's $700M+ round (Feb 2026), alongside Tencent, Wuyuan Capital, and Ji'an Investment. Alibaba had invested in prior rounds.",
+        source: "TechNode / Bloomberg",
+        sourceUrl: "https://technode.com/2026/02/24/kimis-moonshot-ai-sees-revenue-surge-secures-over-700-million-in-new-funding/"
+      },
+      {
+        from: { label: "Tencent", type: "investor" },
+        to: { label: "Moonshot AI (Kimi)", type: "company" },
+        desc: "Tencent co-led Moonshot AI's $700M+ round (Feb 2026), alongside Alibaba. Existing backer from prior rounds.",
+        source: "TechNode",
+        sourceUrl: "https://technode.com/2026/02/24/kimis-moonshot-ai-sees-revenue-surge-secures-over-700-million-in-new-funding/"
+      },
+      {
+        from: { label: "Alibaba", type: "investor" },
+        to: { label: "Baichuan AI", type: "company" },
+        desc: "Alibaba participated in Baichuan's ¥5B ($693M) Series A alongside Tencent, Xiaomi, and state-backed funds including the Beijing AI Industry Investment Fund and Shenzhen Capital Group.",
+        source: "Forbes / South China Morning Post",
+        sourceUrl: "https://www.forbes.com/sites/zinnialee/2024/07/25/alibaba-backed-chinese-ai-unicorn-baichuan-completes-693-million-series-a/"
+      },
+      {
+        from: { label: "Tencent", type: "investor" },
+        to: { label: "Baichuan AI", type: "company" },
+        desc: "Tencent participated in Baichuan's ¥5B Series A (2024), alongside Alibaba, Xiaomi, and state AI funds.",
+        source: "Forbes",
+        sourceUrl: "https://www.forbes.com/sites/zinnialee/2024/07/25/alibaba-backed-chinese-ai-unicorn-baichuan-completes-693-million-series-a/"
+      },
+      {
+        from: { label: "Alibaba", type: "investor" },
+        to: { label: "Zhipu AI", type: "company" },
+        desc: "Alibaba is among Zhipu AI's 50+ institutional investors disclosed in its Hong Kong IPO prospectus (Jan 2026).",
+        source: "36Kr / HK IPO prospectus",
+        sourceUrl: "https://eu.36kr.com/en/p/3644673642827395"
+      },
+      {
+        from: { label: "Beijing AI Industry Investment Fund", type: "state" },
+        to: { label: "Baichuan AI", type: "company" },
+        desc: "State-backed municipal AI fund (Beijing) participated in Baichuan's ¥5B Series A alongside private investors.",
+        source: "South China Morning Post",
+        sourceUrl: "https://finance.yahoo.com/news/chinese-ai-start-baichuan-raises-093000785.html"
+      },
+      {
+        from: { label: "High-Flyer Quant", type: "investor" },
+        to: { label: "DeepSeek", type: "company" },
+        desc: "DeepSeek is fully funded by High-Flyer, the Hangzhou-based hedge fund founded by Liang Wenfeng and two Zhejiang University classmates. DeepSeek uses High-Flyer's R&D budget and compute resources.",
+        source: "Bloomberg / Wikipedia",
+        sourceUrl: "https://www.bloomberg.com/news/articles/2025-01-28/chinese-quant-whiz-built-deepseek-in-the-shadow-of-a-hedge-fund-rout"
+      },
+      {
+        from: { label: "SDIC Venture Capital (state)", type: "state" },
+        to: { label: "Cambricon", type: "company" },
+        desc: "Cambricon's Series B was led by SDIC Venture Capital, a unit of state-owned China Reform Holdings, plus China State-owned Capital Venture Investment Fund and Guoxin Qidi Fund.",
+        source: "Yicai Global",
+        sourceUrl: "https://www.yicaiglobal.com/news/ai-chipmaker-cambricon-is-worth-usd25-billion-after-latest-fundraising"
+      },
+      {
+        from: { label: "Alibaba Cloud (Vidu round)", type: "investor" },
+        to: { label: "Vidu (生数科技)", type: "company" },
+        desc: "Alibaba Cloud led Vidu's ¥2B funding round. Vidu is a Tsinghua spinout focused on generative video AI.",
+        source: "Startup data (per site's existing dataset)",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      }
+    ]
+  },
+  {
+    id: "university",
+    type: "university",
+    icon: "graduation-cap",
+    color: "var(--color-gold)",
+    title: "University → Company",
+    description: "Verified institutional origin links: spinouts, founder alma mater connections, and joint lab arrangements with documented evidence.",
+    relationships: [
+      {
+        from: { label: "Tsinghua University", type: "university" },
+        to: { label: "Zhipu AI", type: "company" },
+        desc: "Zhipu AI was spun out of Tsinghua University's Knowledge Engineering Group (KEG) in 2019. Chairman Tang Jie is a professor at Tsinghua. The company raised HK$4.35B at its Hong Kong IPO (Jan 2026).",
+        source: "36Kr / Rockrose Executive Search",
+        sourceUrl: "https://rockrose.xyz/the-rise-of-zhipu-ai/"
+      },
+      {
+        from: { label: "Tsinghua University", type: "university" },
+        to: { label: "Vidu (生数科技)", type: "company" },
+        desc: "Vidu is a Tsinghua spinout building generative video AI. Founded 2023; achieved 10× revenue growth in 2025.",
+        source: "Site dataset / public reporting",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      },
+      {
+        from: { label: "Tsinghua University", type: "university" },
+        to: { label: "SoundAI (声智科技)", type: "company" },
+        desc: "SoundAI is a spinout from Tsinghua's X-LANCE lab, focused on edge AI voice technology. Raised ¥500M+.",
+        source: "Site dataset",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      },
+      {
+        from: { label: "Zhejiang University", type: "university" },
+        to: { label: "DeepSeek", type: "company" },
+        desc: "Liang Wenfeng (DeepSeek founder) and two classmates founded High-Flyer quant fund as ZJU students. DeepSeek grew from High-Flyer's AI research. ZJU is explicitly cited as the alma mater in multiple sources.",
+        source: "Bloomberg / Yahoo Finance",
+        sourceUrl: "https://finance.yahoo.com/news/meet-liang-wenfeng-hedge-fund-211725330.html"
+      },
+      {
+        from: { label: "CAS Institute of Automation", type: "university" },
+        to: { label: "MiniMax", type: "company" },
+        desc: "Founder Yan Junjie earned his PhD from the CAS Institute of Automation and completed postdoctoral research at Tsinghua before founding MiniMax in 2021.",
+        source: "MiniMax IPO filing / Gate.com",
+        sourceUrl: "https://ir.minimax.io/corporate-information/management"
+      },
+      {
+        from: { label: "Carnegie Mellon University", type: "university" },
+        to: { label: "01.AI (零一万物)", type: "company" },
+        desc: "Founder Kai-Fu Lee earned his PhD from Carnegie Mellon University and conducted pioneering AI research before launching 01.AI in 2023.",
+        source: "Wikipedia / Wired",
+        sourceUrl: "https://www.wired.com/story/chinese-startup-01-ai-is-winning-the-open-source-ai-race/"
+      },
+      {
+        from: { label: "USTC (University of Science & Technology of China)", type: "university" },
+        to: { label: "iFlytek", type: "company" },
+        desc: "iFlytek was founded in 1999 by researchers from USTC (Hefei) and maintains deep institutional ties with the university, benefiting from its voice/NLP research base.",
+        source: "Public record / site dataset",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      }
+    ]
+  },
+  {
+    id: "lab",
+    type: "lab",
+    icon: "flask-conical",
+    color: "var(--color-orange)",
+    title: "Research Lab → Ecosystem",
+    description: "State and institutional research labs that serve as ecosystem anchors — connecting government, universities, and companies.",
+    relationships: [
+      {
+        from: { label: "BAAI (Beijing Academy of AI)", type: "lab" },
+        to: { label: "Beijing AI ecosystem", type: "company" },
+        desc: "BAAI was established in 2018 by the Beijing Municipal Government and Ministry of Science & Technology, with institutional backing from Peking University, Tsinghua University, Baidu, Xiaomi, and ByteDance. It is a non-profit bridging state research and industry.",
+        source: "HKIC press release / SCMP",
+        sourceUrl: "https://www.scmp.com/tech/tech-trends/article/3323177/hong-kong-wealth-fund-beijing-ai-academy-team-hunt-global-ai-talent"
+      },
+      {
+        from: { label: "Zhijiang Lab", type: "lab" },
+        to: { label: "Hangzhou AI ecosystem", type: "company" },
+        desc: "Zhijiang Lab was founded in 2017 by the Zhejiang Provincial Government as a three-way partnership between the government, Zhejiang University, and Alibaba Group. It received ¥30B in government funding and serves as Hangzhou's institutional bridge between basic research and industry.",
+        source: "Nature / Zhejiang Lab official site",
+        sourceUrl: "https://www.nature.com/articles/d42473-019-00182-9"
+      },
+      {
+        from: { label: "CAS (Chinese Academy of Sciences)", type: "lab" },
+        to: { label: "CAS Star (中科星图)", type: "company" },
+        desc: "CAS Star is a direct spinout of the Chinese Academy of Sciences. It operates China's national geospatial data platform and is publicly listed on the STAR Market.",
+        source: "Site dataset",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      }
+    ]
+  },
+  {
+    id: "platform",
+    type: "platform",
+    icon: "layers",
+    color: "var(--color-primary)",
+    title: "Platform Company → Downstream Startups",
+    description: "Large platform companies that provide infrastructure, compute, or distribution to smaller AI firms — a key feature of China's ecosystem architecture.",
+    relationships: [
+      {
+        from: { label: "Alibaba Cloud", type: "investor" },
+        to: { label: "Qwen / downstream startups", type: "company" },
+        desc: "Alibaba Cloud's open-source Qwen model is deployed across municipal public services in Hangzhou and underlies numerous downstream AI products. Alibaba also serves as lead investor in Vidu and several foundation model firms.",
+        source: "Site dataset / Alibaba public disclosures",
+        sourceUrl: "https://china-ai-ecosystem-map.vercel.app/"
+      },
+      {
+        from: { label: "Huawei Cloud + Ascend", type: "company" },
+        to: { label: "Beijing Pilot Zone compute", type: "company" },
+        desc: "Huawei's Ascend AI chips form the compute backbone for China's domestic AI infrastructure. Within Beijing's AI Pilot Zone, firms receive subsidised access to Ascend compute as an alternative to restricted Nvidia GPUs.",
+        source: "CFR / Bloomberg / Tom's Hardware",
+        sourceUrl: "https://www.cfr.org/articles/chinas-ai-chip-deficit-why-huawei-cant-catch-nvidia-and-us-export-controls-should-remain"
+      }
+    ]
+  }
+];
+
+let relActiveFilter = "all";
+let relRendered = false;
+
+function renderRelationships() {
+  if (relRendered) return;
+  relRendered = true;
+  const root = document.getElementById("relationships-root");
+  if (!root) return;
+
+  const allTypes = [
+    { id: "all", label: "All" },
+    { id: "funding", label: "Funding" },
+    { id: "university", label: "University" },
+    { id: "lab", label: "Research Labs" },
+    { id: "platform", label: "Platform" }
+  ];
+
+  root.innerHTML = `
+    <div class="rel-tab-header">
+      <h2 class="rel-tab-title">Ecosystem Relationships</h2>
+      <p class="rel-tab-desc">Structured evidence of the key linkages that define China's AI ecosystem — funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
+      <p class="rel-tab-note">Only relationships verifiable through credible public sources are included. Unverified links have been deliberately excluded.</p>
+    </div>
+
+    <div class="rel-filters">
+      <span class="rel-filter-label">Filter:</span>
+      ${allTypes.map(t => `<button class="chip ${ t.id === "all" ? "active" : ""}" data-rel-filter="${t.id}">${t.label}</button>`).join("")}
+    </div>
+
+    <div id="rel-groups-container"></div>
+  `;
+
+  // Filter chip listeners
+  root.querySelectorAll("[data-rel-filter]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      root.querySelectorAll("[data-rel-filter]").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      relActiveFilter = btn.dataset.relFilter;
+      renderRelGroups();
+    });
+  });
+
+  renderRelGroups();
+  lucide.createIcons();
+}
+
+function renderRelGroups() {
+  const container = document.getElementById("rel-groups-container");
+  if (!container) return;
+
+  const visibleGroups = relActiveFilter === "all"
+    ? relationshipGroups
+    : relationshipGroups.filter(g => g.id === relActiveFilter);
+
+  container.innerHTML = visibleGroups.map(group => {
+    const cards = group.relationships.map(rel => `
+      <div class="rel-card">
+        <div class="rel-card-nodes">
+          <span class="rel-node rel-node--${rel.from.type}">${rel.from.label}</span>
+          <span class="rel-arrow">→</span>
+          <span class="rel-node rel-node--${rel.to.type}">${rel.to.label}</span>
+          <span class="rel-type-badge rel-type-badge--${group.type}" style="margin-left:auto">${group.id}</span>
+        </div>
+        <div class="rel-card-desc">${rel.desc}</div>
+        <div class="rel-card-source">Source: <a href="${rel.sourceUrl}" target="_blank" rel="noopener">${rel.source}</a></div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="rel-group" data-group-type="${group.id}">
+        <div class="rel-group-header">
+          <div class="rel-group-icon" style="background:color-mix(in oklab,${group.color} 15%,var(--color-bg));color:${group.color}">
+            <i data-lucide="${group.icon}" width="16" height="16"></i>
+          </div>
+          <span class="rel-group-title">${group.title}</span>
+          <span class="rel-group-count">${group.relationships.length} relationships</span>
+        </div>
+        <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-bottom:var(--space-4);line-height:1.6;">${group.description}</p>
+        <div class="rel-cards">${cards}</div>
+      </div>
+    `;
+  }).join("");
+
+  lucide.createIcons();
+}
+
+
+// ══════════════════════════════════════════════════════════════════════
+//  ANALYTICAL LAYER DATA & RENDERER
+//  Lens: Talent Pipelines
+//  Rationale: the most comprehensively evidenced lens across all 40
+//  companies — founder biographies, university records, and the
+//  MacroPolo/Stanford AI Index corroborate every city-level claim.
+// ══════════════════════════════════════════════════════════════════════
+
+const analyticalData = {
+  lens: "Talent Pipelines",
+  lensRationale: "Capital flows data is meaningful but concentrated in a few large rounds. Compute access data remains partially opaque due to Huawei's unreported allocations. Talent pipelines, by contrast, are the most consistently evidenced lens across all 40 companies — founder biographies are publicly documented, university affiliations verifiable, and the macro data (MacroPolo, Stanford AI Index, Bloomberg/LexisNexis patent analysis) corroborates city-level conclusions. This lens also most directly maps to the capstone's \"institutional integration\" domain.",
+  keyStats: [
+    {
+      num: "47%",
+      label: "Top global AI researchers from China",
+      note: "Up from 29% in 2019 — MacroPolo 2022 Global AI Talent Tracker"
+    },
+    {
+      num: "4,986",
+      label: "AI/ML patents filed by Tsinghua (2005–2024)",
+      note: "More than MIT, Stanford, Princeton and Harvard combined — Bloomberg/LexisNexis"
+    },
+    {
+      num: "66%",
+      label: "Beijing VC flowing to AI startups (2023–24)",
+      note: "#1 globally — Startup Genome data"
+    },
+    {
+      num: "$4.4B",
+      label: "Beijing AI investment in 2025",
+      note: "4× Shanghai's $1.1B — AI World / aiworld.eu"
+    }
+  ],
+  cities: [
+    {
+      name: "Beijing",
+      score: "97",
+      scoreLabel: "Pipeline Strength",
+      bar: 100,
+      top: true,
+      verdict: "Dominates on every pipeline dimension — institutional density, state-research integration, and cross-sector talent recycling.",
+      signals: [
+        "Tsinghua University filed 4,986 AI/ML patents (2005–2024), more than MIT, Stanford, Princeton, and Harvard combined (Bloomberg/LexisNexis)",
+        "BAAI — established 2018 by Beijing Municipal Government — formally links Peking University, Tsinghua, Baidu, Xiaomi, and ByteDance into one research-to-industry pipeline",
+        "Direct spinouts traceable in the top-40 dataset: Zhipu AI (Tsinghua KEG), Vidu (Tsinghua), SoundAI (Tsinghua X-LANCE), Horizon Robotics (Baidu alum), CAS Star (CAS)",
+        "Moonshot AI founding team includes Tsinghua and CMU alumni — cross-border talent circulation within the pilot zone",
+        "66% of Beijing VC directed to AI startups (2023–24), highest share globally (Startup Genome)"
+      ]
+    },
+    {
+      name: "Hangzhou",
+      score: "82",
+      scoreLabel: "Pipeline Strength",
+      bar: 84,
+      top: false,
+      verdict: "Strong ZJU-anchored pipeline, augmented by Alibaba's industrial spillovers and the government-backed Zhijiang Lab.",
+      signals: [
+        "DeepSeek founders (including Liang Wenfeng) are Zhejiang University alumni — ZJU's CS and engineering departments are the primary talent source",
+        "Zhijiang Lab (2017): ZJU + Alibaba + Zhejiang Provincial Government three-way partnership, ¥30B state funding — acts as research-to-startup accelerator (Nature, 2019)",
+        "ZJU launched China's first AI undergraduate program in 2018 and hosts the country's sole national AI textbook base (est. 2024)",
+        "Unitree Robotics and the broader Six Dragons cohort are all linked to ZJU's engineering-manufacturing nexus"
+      ]
+    },
+    {
+      name: "Shanghai",
+      score: "68",
+      scoreLabel: "Pipeline Strength",
+      bar: 70,
+      top: false,
+      verdict: "Talent pipeline is cross-institutional rather than anchored by a single flagship university — strong in CAS-linked and overseas-returnee talent.",
+      signals: [
+        "MiniMax founder Yan Junjie: PhD from CAS Institute of Automation, postdoc at Tsinghua, then SenseTime before founding MiniMax (MiniMax IPO prospectus)",
+        "Stepfun and MetaX draw on a mix of overseas returnees and domestic CAS/Fudan-linked researchers",
+        "Shanghai Foundation Model Incubator (Zhangjiang Hi-Tech Park) provides structured commercialisation pathways, but lacks a single dominant university feeder",
+        "AI research output: Shanghai ranked #2 nationally in 2025, behind Beijing (aiworld.eu)"
+      ]
+    },
+    {
+      name: "Shenzhen / GBA",
+      score: "55",
+      scoreLabel: "Pipeline Strength",
+      bar: 57,
+      top: false,
+      verdict: "Talent pipeline is hardware-anchored — strong in engineering and manufacturing talent, weaker in foundational AI research output.",
+      signals: [
+        "Huawei Cloud and Tencent are large internal talent pools, but function as absorbers rather than originators of frontier AI research talent",
+        "DJI's dominance in drones reflects deep hardware/systems engineering capability drawn from the GBA manufacturing belt",
+        "No Shenzhen university ranks among China's top-5 AI research output cities (aiworld.eu, 2025 data)",
+        "Shenzhen's AI pilot zone leans on platform-anchored orchestration (Tencent, Huawei) rather than university-spinout pathways"
+      ]
+    },
+    {
+      name: "Hefei / Other",
+      score: "42",
+      scoreLabel: "Pipeline Strength",
+      bar: 43,
+      top: false,
+      verdict: "Strong in narrow verticals (voice AI, automotive chips) due to USTC's research depth, but limited ecosystem breadth.",
+      signals: [
+        "iFlytek's deep USTC ties make Hefei a national leader in voice/NLP AI — one of China's few non-tier-1 AI champions",
+        "Wuhan's Black Sesame Tech is automotive-chip focused, aligned with Wuhan's vehicle manufacturing cluster",
+        "Nanjing and Xi'an appear in China's top-5 AI research cities (2025) but have not yet produced equivalent commercialisation outcomes"
+      ]
+    }
+  ],
+  pipelines: [
+    {
+      org: "Tsinghua University",
+      type: "Research University",
+      icon: "graduation-cap",
+      companies: ["Zhipu AI", "Vidu", "SoundAI", "Moonshot AI (alumni)"],
+      note: "Filed more AI/ML patents (2005–2024) than MIT, Stanford, Princeton, and Harvard combined. Tang Jie (Zhipu AI Chairman) is a sitting Tsinghua professor.",
+      source: "Bloomberg / LexisNexis",
+      sourceUrl: "https://fortune.com/2025/11/19/us-china-ai-race-higher-education-tsinghua-university-outpacing-ivy-league-mit-harvard-stanford/"
+    },
+    {
+      org: "Zhejiang University",
+      type: "Research University",
+      icon: "graduation-cap",
+      companies: ["DeepSeek (founders)", "Unitree Robotics", "Manycore Tech"],
+      note: "Liang Wenfeng (DeepSeek) and two co-founders are ZJU alumni. ZJU hosts China's first AI undergraduate program (2018) and the national AI textbook base (2024).",
+      source: "Bloomberg / Yahoo Finance / ZJU official",
+      sourceUrl: "https://finance.yahoo.com/news/meet-liang-wenfeng-hedge-fund-211725330.html"
+    },
+    {
+      org: "CAS (Chinese Academy of Sciences)",
+      type: "State Research Institution",
+      icon: "microscope",
+      companies: ["MiniMax (founder PhD)", "CAS Star (spinout)"],
+      note: "CAS Institute of Automation produced MiniMax founder Yan Junjie (PhD 2015). CAS Star is a formal CAS institutional spinout.",
+      source: "MiniMax IPO filing",
+      sourceUrl: "https://ir.minimax.io/corporate-information/management"
+    },
+    {
+      org: "BAAI (Beijing Academy of AI)",
+      type: "State-Backed Research Hub",
+      icon: "building-2",
+      companies: ["Baidu", "Xiaomi", "ByteDance", "PKU/Tsinghua links"],
+      note: "Established 2018 by Beijing Municipal Government and MOST, with institutional backing from Peking University, Tsinghua, Baidu, Xiaomi, and ByteDance. Serves as a talent coordination node for the Beijing ecosystem.",
+      source: "SCMP / HKIC press release",
+      sourceUrl: "https://www.scmp.com/tech/tech-trends/article/3323177/hong-kong-wealth-fund-beijing-ai-academy-team-hunt-global-ai-talent"
+    },
+    {
+      org: "Zhijiang Lab",
+      type: "Provincial Research Lab",
+      icon: "flask-conical",
+      companies: ["Alibaba DAMO / Qwen", "ZJU ecosystem"],
+      note: "Three-way ZJU + Alibaba + Zhejiang Provincial Government partnership. ¥30B in state funding. Produces research that feeds directly into Alibaba's Qwen model development.",
+      source: "Nature",
+      sourceUrl: "https://www.nature.com/articles/d42473-019-00182-9"
+    },
+    {
+      org: "SenseTime (talent recycler)",
+      type: "Talent Exporter",
+      icon: "users",
+      companies: ["MiniMax (founder + COO)"],
+      note: "SenseTime has become a notable feeder for second-generation AI startups. MiniMax founder Yan Junjie rose to VP at SenseTime before founding MiniMax; co-founder Yeyi Yun also came from SenseTime.",
+      source: "MiniMax IPO filing / Gate.com",
+      sourceUrl: "https://www.gate.com/tr/news/detail/chinese-henan-phd-student-founded-minimax-building-a-300-billion-market-cap-19573047"
+    }
+  ],
+  methodology: [
+    { text: "Lens selection: talent pipelines were chosen over capital flows and compute access because they are verifiable across the largest number of companies in the dataset using primary sources (IPO filings, university records, press biographies).", url: null },
+    { text: "City pipeline scores (out of 100) are a qualitative composite of: documented university spinouts in the top-40 dataset, research output rankings (aiworld.eu, 2025), VC-to-AI concentration data (Startup Genome), and patent output data (Bloomberg/LexisNexis via Fortune, Nov 2025). They are indicative rather than strictly quantitative.", url: "https://fortune.com/2025/11/19/us-china-ai-race-higher-education-tsinghua-university-outpacing-ivy-league-mit-harvard-stanford/" },
+    { text: "MacroPolo Global AI Talent Tracker (2022): China's share of top AI researchers rose from 29% (2019) to 47% (2022). Most work in the US, but the pipeline originates in Chinese universities.", url: "https://macropolo.org/digital-projects/the-global-ai-talent-tracker/" },
+    { text: "Stanford AI Index 2024: US institutions produced 40 significant AI models in 2024 vs. 15 from China — indicating that talent density does not yet fully translate into frontier model output.", url: "https://aiindex.stanford.edu/" },
+    { text: "Relationships excluded due to insufficient evidence: specific headcount data for individual companies' university hires; claimed ZJU affiliations for Hangzhou companies not confirmed in founder biographies.", url: null }
+  ]
+};
+
+let analyticalRendered = false;
+
+function renderAnalytical() {
+  if (analyticalRendered) return;
+  analyticalRendered = true;
+  const root = document.getElementById("analytical-root");
+  if (!root) return;
+
+  const { lens, lensRationale, keyStats, cities, pipelines, methodology } = analyticalData;
+
+  // Key stats
+  const statsHtml = keyStats.map(s => `
+    <div class="al-stat-card">
+      <div class="al-stat-num">${s.num}</div>
+      <div class="al-stat-label">${s.label}</div>
+      <div class="al-stat-note">${s.note}</div>
+    </div>
+  `).join("");
+
+  // City cards
+  const citiesHtml = cities.map(c => `
+    <div class="al-city-card ${c.top ? "al-city-card--top" : ""}">
+      <div class="al-city-header">
+        <div class="al-city-name">${c.name}</div>
+        <div class="al-city-score">
+          <div class="al-city-score-num">${c.score}</div>
+          <div class="al-city-score-label">${c.scoreLabel}</div>
+        </div>
+      </div>
+      <div class="al-city-verdict">${c.verdict}</div>
+      <div class="al-city-signals">
+        ${c.signals.map(s => `<div class="al-signal"><div class="al-signal-dot"></div><div class="al-signal-text">${s}</div></div>`).join("")}
+      </div>
+      <div class="al-bar-wrap"><div class="al-bar-fill" style="width:0%" data-width="${c.bar}%"></div></div>
+    </div>
+  `).join("");
+
+  // Pipeline cards
+  const pipelinesHtml = pipelines.map(p => `
+    <div class="al-pipeline-card">
+      <div class="al-pipeline-card-header">
+        <div class="al-pipeline-icon"><i data-lucide="${p.icon}" width="18" height="18"></i></div>
+        <div>
+          <div class="al-pipeline-org">${p.org}</div>
+          <div class="al-pipeline-type">${p.type}</div>
+        </div>
+      </div>
+      <div class="al-pipeline-companies">${p.companies.map(c => `<span class="al-pipeline-co">${c}</span>`).join("")}</div>
+      <div class="al-pipeline-note">${p.note}</div>
+      <div class="al-pipeline-source">Source: <a href="${p.sourceUrl}" target="_blank" rel="noopener">${p.source}</a></div>
+    </div>
+  `).join("");
+
+  // Methodology
+  const methodHtml = methodology.map(m =>
+    m.url
+      ? `<li>${m.text} <a href="${m.url}" target="_blank" rel="noopener">↗</a></li>`
+      : `<li>${m.text}</li>`
+  ).join("");
+
+  root.innerHTML = `
+    <div class="al-header">
+      <div class="al-lens-badge"><i data-lucide="users" width="12" height="12"></i> Analytical Lens: ${lens}</div>
+      <h2 class="al-title">Where does China's AI talent come from — and where does it go?</h2>
+      <p class="al-subtitle">Talent pipelines are the most consistently verifiable analytical lens across all 40 companies in this dataset. University spinouts, founder biographies, and macro research output data align to produce a coherent picture of where ecosystem advantage is concentrated.</p>
+      <div class="al-rationale">
+        <h4>Why this lens?</h4>
+        <p>${lensRationale}</p>
+      </div>
+    </div>
+
+    <div class="al-stat-row">${statsHtml}</div>
+
+    <div class="al-section-title">Pipeline strength by city</div>
+    <div class="al-cities">${citiesHtml}</div>
+
+    <div class="al-section-title">Key institutional pipelines</div>
+    <div class="al-pipeline-grid">${pipelinesHtml}</div>
+
+    <div class="al-methodology">
+      <h4>Methodology &amp; limitations</h4>
+      <ul>${methodHtml}</ul>
+    </div>
+  `;
+
+  // Animate bars
+  setTimeout(() => {
+    root.querySelectorAll(".al-bar-fill").forEach(el => {
+      el.style.width = el.dataset.width;
+    });
+  }, 120);
+
+  lucide.createIcons();
+}
+
 </script>
 </body>
 </html>
