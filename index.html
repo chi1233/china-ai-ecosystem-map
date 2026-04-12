@@ -711,20 +711,24 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
     </div>
     <div style="display:flex;flex-direction:column;gap:var(--space-5);">
       <div>
-        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Company Selection</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">40 companies selected on the basis of valuation or funding scale, policy alignment with China's AI Pilot Zone programme, and analytical relevance to the three orchestration domains (capital coordination, data/compute governance, institutional integration). Selection draws on the Hurun AI Top 50, STAR Market filings, Hong Kong IPO prospectuses, and verified press reporting as of Q1 2026.</p>
+        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">How This Was Built</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">This tool was developed alongside a thesis written in residence at Schwarzman College, Tsinghua University (2025&ndash;26). The 40-company dataset was constructed from first principles: each company was individually researched using IPO filings, official government announcements, and verified press. No third-party AI startup lists were used as a primary source. All data reflects Q1 2026.</p>
       </div>
       <div>
-        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">What Defines a Relationship</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Relationships are included only where verifiable evidence exists in a primary source (IPO prospectus, public filing, official institutional statement) or a highly reputable secondary source (Bloomberg, Reuters, SCMP, Nature, Forbes). Inferred or commonly cited but unverified relationships are excluded. Each relationship card links directly to its source.</p>
+        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Company Selection Criteria</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Companies were included if they met at least two of three criteria: (1) valuation or funding scale placing them among China's most significant AI ventures, (2) direct policy alignment with China's AI Pilot Zone programme, (3) analytical relevance to one of the three orchestration domains. Reference sources: Hurun AI Top 50, STAR Market and HKEX filings, and Beijing/Hangzhou municipal AI programme documents.</p>
+      </div>
+      <div>
+        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Evidence Standard for Relationships</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Every relationship requires a traceable primary source (IPO prospectus, public filing, official institutional statement) or a named, dateable report from a tier-1 outlet (Bloomberg, Reuters, SCMP, Nature, Forbes, The Economist). Each card links directly to its source. Relationships that are widely cited but lack a verifiable primary anchor are excluded — not approximated.</p>
       </div>
       <div>
         <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Primary Sources</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Thesis fieldwork (Schwarzman College, Tsinghua University, 2025&ndash;26); Beijing AI Pilot Zone policy documents; company IPO prospectuses (HK Stock Exchange, STAR Market); MacroPolo Global AI Talent Tracker; Stanford AI Index 2024; Bloomberg/LexisNexis patent data; Startup Genome VC concentration data; aiworld.eu investment data (2025); Nature (Zhejiang Lab); SCMP; Yicai Global; TechNode.</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Thesis fieldwork (Schwarzman College, Tsinghua University, 2025&ndash;26) &middot; Beijing AI Pilot Zone policy documents &middot; HKEX and STAR Market IPO prospectuses &middot; MacroPolo Global AI Talent Tracker 2.0 (2024) &middot; Stanford AI Index 2024 &middot; Bloomberg/LexisNexis patent data (via Fortune, Nov 2025) &middot; Startup Genome VC concentration data &middot; aiworld.eu (2025) &middot; Nature (Zhejiang Lab, 2019) &middot; SCMP &middot; Yicai Global &middot; TechNode &middot; The Economist (March 2026, NeurIPS 2025 analysis)</p>
       </div>
       <div>
-        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Key Limitations</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Private company valuations are reported figures and may not reflect current market conditions. State guidance fund participation is often undisclosed; figures represent confirmed rounds only. The dataset reflects a snapshot as of Q1 2026 and will require updating as the ecosystem evolves.</p>
+        <div style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">Known Limitations</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;">Private valuations are reported figures; they are not independently verified and may not reflect current market conditions. State guidance fund participation is structurally underreported — only confirmed rounds are shown. Talent pipeline scores are qualitative composites, not quantitative indices. This dataset is a Q1 2026 snapshot and will require periodic updating as the ecosystem evolves.</p>
       </div>
     </div>
   </div>
@@ -1076,10 +1080,10 @@ function drawChinaMap(){
 
 
 const keyTakeaways = [
-  "Beijing dominates through institutional density: Tsinghua spinouts, BAAI, state guidance funds, and the AI Pilot Zone converge in a single bounded policy environment.",
-  "Universities are the primary formation mechanism: direct spinouts (Zhipu AI, Vidu, SoundAI) and founder pipelines (DeepSeek/ZJU, MiniMax/CAS) account for the majority of top-10 companies.",
-  "China operates two distinct orchestration models: Beijing's state-academic integration vs. Hangzhou's platform-anchored coordination under Alibaba. DeepSeek tests whether private capital can replicate state-directed outcomes.",
-  "Compute sovereignty is a binding constraint: US export controls on Nvidia GPUs have made Cambricon, Moore Threads, and Huawei Ascend strategic infrastructure assets, not merely commercial products."
+  "Beijing wins because it collapses talent, capital, and policy into a single loop — Tsinghua, BAAI, state guidance funds, and the AI Pilot Zone do not merely coexist; they are structurally coupled.",
+  "China's top AI companies are not venture stories. They are university exits: Zhipu AI, Vidu, SoundAI are Tsinghua spinouts; DeepSeek and MiniMax trace directly to ZJU and CAS. The formation mechanism is institutional, not market-driven.",
+  "Beijing and Hangzhou represent two incompatible bets: state-academic integration vs. platform-anchored coordination. DeepSeek is the live test of whether private capital can replicate what state infrastructure built.",
+  "The chip embargo did not slow China's AI build — it made domestic compute a strategic mandate. Cambricon, Moore Threads, and Huawei Ascend are no longer chip companies. They are sovereign infrastructure."
 ];
 
 function renderInsights(){
