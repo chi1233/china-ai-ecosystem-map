@@ -510,6 +510,8 @@ tbody td{padding:var(--space-3) var(--space-4) var(--space-4);vertical-align:top
 .share-toast{position:fixed;bottom:var(--space-6);left:50%;transform:translateX(-50%) translateY(8px);background:var(--color-text);color:var(--color-bg);font-size:var(--text-xs);font-family:var(--font-body);padding:var(--space-2) var(--space-5);border-radius:var(--radius-full);opacity:0;transition:opacity 0.2s ease,transform 0.2s ease;pointer-events:none;white-space:nowrap;z-index:999;}
 .share-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
+.panel-section-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;letter-spacing:-0.02em;color:var(--color-text);line-height:1.2;}
+
 /* FOOTER */
 footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padding:var(--space-6);}
 .footer-inner{max-width:1200px;margin-inline:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4);}
@@ -663,7 +665,7 @@ footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padd
 
     <div class="tab-panel" id="panel-insights" role="tabpanel">
       <div class="insights-header">
-        <div></div>
+        <h2 class="panel-section-title">Research Insights</h2>
         <button class="share-btn" id="shareInsightsBtn" aria-label="Copy link to Research Insights tab">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg>
           Share
@@ -1427,10 +1429,14 @@ function renderRelationships() {
   ];
 
   root.innerHTML = `
-    <div class="rel-tab-header">
+    <div class="rel-tab-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
+      <div>
       <h2 class="rel-tab-title">Ecosystem Relationships</h2>
       <p class="rel-tab-desc">Structured evidence of the key linkages that define China's AI ecosystem: funding flows, university spinouts, research lab anchors, and platform dependencies. Every relationship below is sourced from a public filing, credible press report, or primary institutional document.</p>
       <p class="rel-tab-note">Only relationships verifiable through credible public sources are included. Unverified links have been deliberately excluded.</p>
+    </div>
+      </div>
+      <button class="share-btn" id="shareRelationshipsBtn" aria-label="Copy link to Relationships tab" style="flex-shrink:0;margin-top:4px;"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
     </div>
 
     <div class="rel-filters">
@@ -1509,9 +1515,9 @@ const analyticalData = {
   lensRationale: "Capital flows data is meaningful but concentrated in a few large rounds. Compute access data remains partially opaque due to Huawei's unreported allocations. Talent pipelines are the most consistently evidenced lens across all 40 companies: founder biographies are publicly documented, university affiliations are verifiable, and macro data from MacroPolo, Stanford AI Index, and Bloomberg/LexisNexis corroborates city-level conclusions. This lens also most directly maps to the capstone's \"institutional integration\" domain.",
   keyStats: [
     {
-      num: "47%",
+      num: "51%",
       label: "Top global AI researchers from China",
-      note: "Up from 29% in 2019. MacroPolo Global AI Talent Tracker 2.0 (2024)"
+      note: "Up from 29% (2019). MacroPolo Tracker 2.0; The Economist, March 2026"
     },
     {
       num: "4,986",
@@ -1727,14 +1733,17 @@ function renderAnalytical() {
   ).join("");
 
   root.innerHTML = `
-    <div class="al-header">
+    <div class="al-header" style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-4);">
+      <div style="flex:1;">
       <div class="al-lens-badge"><i data-lucide="users" width="12" height="12"></i> Analytical Lens: ${lens}</div>
-      <h2 class="al-title">Where does China's AI talent come from, and where does it go?</h2>
+      <h2 class="al-title">Where does China&#x2019;s AI talent come from, and where does it go?</h2>
       <p class="al-subtitle">Talent pipelines are the most consistently verifiable analytical lens across all 40 companies in this dataset. University spinouts, founder biographies, and macro research output data align to produce a coherent picture of where ecosystem advantage is concentrated.</p>
       <div class="al-rationale">
         <h4>Why this lens?</h4>
         <p>${lensRationale}</p>
       </div>
+      </div>
+      <button class="share-btn" id="shareTalentBtn" aria-label="Copy link to Talent tab" style="flex-shrink:0;margin-top:4px;"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
     </div>
 
     <div class="al-stat-row">${statsHtml}</div>
@@ -1806,6 +1815,33 @@ function renderAnalytical() {
       toast.classList.add('show');
       setTimeout(function(){ toast.classList.remove('show'); }, 2200);
     }
+  });
+})();
+
+// Share buttons: Relationships + Talent tabs
+(function(){
+  function copyAndToast(url){
+    var toast = document.getElementById('shareToast');
+    function show(){ if(toast){ toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); }, 2200); } }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(show);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = url; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta); show();
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('click', function(e){
+      if(e.target.closest('#shareRelationshipsBtn')){
+        copyAndToast(location.origin + location.pathname + '#tab-relationships');
+      }
+      if(e.target.closest('#shareTalentBtn')){
+        copyAndToast(location.origin + location.pathname + '#tab-analytical');
+      }
+    });
   });
 })();
 </script>
