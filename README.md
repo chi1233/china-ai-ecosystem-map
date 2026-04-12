@@ -41,11 +41,11 @@ This extends Justin Yifu Lin's New Structural Economics to the digital economy, 
 
 ## Key Findings
 
-- **Beijing wins because it collapses talent, capital, and policy into a single loop** — Tsinghua, BAAI, state guidance funds, and the AI Pilot Zone are not colocated; they are structurally coupled.
-- **China's top AI companies are not venture stories. They are university exits.** Zhipu AI, Vidu, SoundAI are Tsinghua spinouts; DeepSeek and MiniMax trace directly to ZJU and CAS. The formation mechanism is institutional, not market-driven.
-- **Beijing and Hangzhou represent two incompatible bets**: state-academic integration vs. platform-anchored coordination. DeepSeek is the live test of whether private capital can replicate what state infrastructure built.
-- **The chip embargo did not slow China's AI build — it made domestic compute a strategic mandate.** Cambricon, Moore Threads, and Huawei Ascend are no longer chip companies. They are sovereign infrastructure.
-- **51% of the world's top AI researchers originate from Chinese undergraduate institutions** (up from 29% in 2019), per MacroPolo Tracker 2.0 and The Economist's March 2026 NeurIPS analysis.
+- **51%** of the world's top AI researchers originate from Chinese undergraduate institutions (up from 29% in 2019)
+- **Beijing dominates** through institutional density: Tsinghua spinouts, BAAI, state guidance funds, and the AI Pilot Zone converge in a single bounded policy environment
+- **Universities are the primary formation mechanism**: direct spinouts (Zhipu AI, Vidu, SoundAI) and founder pipelines (DeepSeek/ZJU, MiniMax/CAS) account for the majority of top-10 companies
+- **Two orchestration models**: Beijing's state-academic integration vs. Hangzhou's platform-anchored coordination under Alibaba
+- **Compute sovereignty** is a binding constraint: US export controls have made Cambricon, Moore Threads, and Huawei Ascend strategic infrastructure assets
 
 ---
 
