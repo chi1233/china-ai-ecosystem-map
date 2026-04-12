@@ -512,6 +512,8 @@ tbody td{padding:var(--space-3) var(--space-4) var(--space-4);vertical-align:top
 
 .panel-section-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;letter-spacing:-0.02em;color:var(--color-text);line-height:1.2;}
 
+.al-filter-row{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2);}
+
 /* FOOTER */
 footer{margin-top:var(--space-16);border-top:1px solid var(--color-divider);padding:var(--space-6);}
 .footer-inner{max-width:1200px;margin-inline:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4);}
@@ -1737,11 +1739,7 @@ function renderAnalytical() {
       <div style="flex:1;">
       <div class="al-lens-badge"><i data-lucide="users" width="12" height="12"></i> Analytical Lens: ${lens}</div>
       <h2 class="al-title">Where does China&#x2019;s AI talent come from, and where does it go?</h2>
-      <p class="al-subtitle">Talent pipelines are the most consistently verifiable analytical lens across all 40 companies in this dataset. University spinouts, founder biographies, and macro research output data align to produce a coherent picture of where ecosystem advantage is concentrated.</p>
-      <div class="al-rationale">
-        <h4>Why this lens?</h4>
-        <p>${lensRationale}</p>
-      </div>
+      <p class="al-subtitle">University spinouts, founder biographies, and macro talent data converge on a consistent picture of where China&#x2019;s AI advantage is being built.</p>
       </div>
       <button class="share-btn" id="shareTalentBtn" aria-label="Copy link to Talent tab" style="flex-shrink:0;margin-top:4px;"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="3" r="1.5"/><circle cx="4" cy="8" r="1.5"/><circle cx="12" cy="13" r="1.5"/><line x1="5.5" y1="7" x2="10.5" y2="4"/><line x1="5.5" y1="9" x2="10.5" y2="12"/></svg> Share</button>
     </div>
@@ -1751,8 +1749,19 @@ function renderAnalytical() {
     <div class="al-section-title">Pipeline strength by city</div>
     <div class="al-cities">${citiesHtml}</div>
 
-    <div class="al-section-title">Key institutional pipelines</div>
-    <div class="al-pipeline-grid">${pipelinesHtml}</div>
+    <div class="al-section-title" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3);">
+      <span>Key institutional pipelines</span>
+      <div class="al-filter-row">
+        <span class="rel-filter-label">Filter:</span>
+        <button class="chip active" data-al-filter="all">All</button>
+        <button class="chip" data-al-filter="Research University">Universities</button>
+        <button class="chip" data-al-filter="State Research Institution">State Institutions</button>
+        <button class="chip" data-al-filter="State-Backed Research Hub">Research Hubs</button>
+        <button class="chip" data-al-filter="Provincial Research Lab">Regional Labs</button>
+        <button class="chip" data-al-filter="Talent Exporter">Exporters</button>
+      </div>
+    </div>
+    <div class="al-pipeline-grid" id="al-pipeline-container">${pipelinesHtml}</div>
 
   `;
 
@@ -1762,6 +1771,22 @@ function renderAnalytical() {
       el.style.width = el.dataset.width;
     });
   }, 120);
+
+  // Pipeline filter chips
+  root.querySelectorAll("[data-al-filter]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      root.querySelectorAll("[data-al-filter]").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.alFilter;
+      const container = document.getElementById("al-pipeline-container");
+      if (!container) return;
+      container.querySelectorAll(".al-pipeline-card").forEach(card => {
+        const typeEl = card.querySelector(".al-pipeline-type");
+        const match = filter === "all" || (typeEl && typeEl.textContent.trim() === filter);
+        card.style.display = match ? "" : "none";
+      });
+    });
+  });
 
   lucide.createIcons();
 }
